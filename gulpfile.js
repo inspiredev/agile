@@ -4,13 +4,14 @@ var gulp = require('gulp'),
 	jscs = require('gulp-jscs'),
 	jshint = require('gulp-jshint'),
 	plumber = require('gulp-plumber'),
-	prefix = require('gulp-prefix'),
+	prefix = require('gulp-autoprefixer'),
 	csso = require('gulp-csso'),
 	sass = require('gulp-sass'),
+	source = require('vinyl-source-stream'),
 	watchify = require('watchify'),
 	xtend = require('xtend');
 
-gulp.task('scss', function () {
+gulp.task('styles', function () {
 	return gulp.src('./scss/**/*.scss')
 		.pipe(plumber({
 			errorHandler: function (err) {
@@ -73,6 +74,6 @@ gulp.task('scripts', function () {
 	return rebundle();
 });
 
-gulp.task('watch', ['enable-watch-mode', 'js'], function () {
-	gulp.watch('./scss/**/*.scss', ['scss']);
+gulp.task('watch', ['enable-watch-mode', 'scripts'], function () {
+	gulp.watch('./scss/**/*.scss', ['styles']);
 });
