@@ -11,7 +11,12 @@ function create_reference() {
 			'menu_position' => 5,
 			'public' => true,
 			'has_archive' => true,
-			'taxonomies' => array('category')
+			'supports' => array(
+				'title',
+				'editor',
+				'page-attributes'
+			),
+			'taxonomies' => array( 'category' )
 		)
 	);
 }
