@@ -7,6 +7,7 @@ function create_release() {
 				'name' => __( 'New Releases' ),
 				'singular_name' => __( 'New Release' )
 			),
+			'menu_icon' => 'dashicons-album',
 			'menu_position' => 5,
 			'public' => true,
 			'has_archive' => true,

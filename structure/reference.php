@@ -7,6 +7,7 @@ function create_reference() {
 				'name' => __( 'References' ),
 				'singular_name' => __( 'Reference' )
 			),
+			'menu_icon' => 'dashicons-book-alt',
 			'menu_position' => 5,
 			'public' => true,
 			'has_archive' => true,
