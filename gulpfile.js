@@ -68,11 +68,11 @@ gulp.task('scripts', function () {
 				gutil.log(gutil.colors.red('Browserify ' + e));
 			})
 			.pipe(source('main.js'))
-			.pipe(gulp.dest(path.js.dest));
+			.pipe(gulp.dest('./js/dist/main.js'));
 	}
 	return rebundle();
 });
 
 gulp.task('watch', ['enable-watch-mode', 'js'], function () {
-	gulp.watch('paths.scss.src', ['scss']);
+	gulp.watch('./scss/**/*.scss', ['scss']);
 });
