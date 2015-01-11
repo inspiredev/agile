@@ -153,3 +153,8 @@ require get_template_directory() . '/structure/release.php';
  * Release post type
  */
 require get_template_directory() . '/structure/highlight.php';
+
+/**
+ * Post 2 Post Connections
+ */
+require get_template_directory() . '/structure/connections.php';
