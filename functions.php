@@ -138,3 +138,8 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Reference post type
+ */
+require get_template_directory() . '/posts/reference.php';
