@@ -148,3 +148,8 @@ require get_template_directory() . '/structure/reference.php';
  * Release post type
  */
 require get_template_directory() . '/structure/release.php';
+
+/**
+ * Release post type
+ */
+require get_template_directory() . '/structure/highlight.php';
