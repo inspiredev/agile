@@ -1,11 +1,12 @@
 var gulp = require('gulp'),
 	gutil = require('gulp-util'),
 	browserify = require('browserify'),
+	csso = require('gulp-csso'),
 	jscs = require('gulp-jscs'),
 	jshint = require('gulp-jshint'),
 	plumber = require('gulp-plumber'),
 	prefix = require('gulp-autoprefixer'),
-	csso = require('gulp-csso'),
+	rsync = require('rsyncwrapper').rsync,
 	sass = require('gulp-sass'),
 	source = require('vinyl-source-stream'),
 	watchify = require('watchify'),
@@ -15,7 +16,7 @@ gulp.task('styles', function () {
 	return gulp.src('./scss/**/*.scss')
 		.pipe(plumber({
 			errorHandler: function (err) {
-				gutil.log($.util.colors.red('Styles error:\n' + err.message));
+				gutil.log(gutil.colors.red('Styles error:\n' + err.message));
 				// emit `end` event so the stream can resume https://github.com/dlmanning/gulp-sass/issues/101
 				if (this.emit) {
 					this.emit('end');
@@ -76,4 +77,23 @@ gulp.task('scripts', function () {
 
 gulp.task('watch', ['enable-watch-mode', 'scripts'], function () {
 	gulp.watch('./scss/**/*.scss', ['styles']);
+});
+
+var server = require('./server.json');
+gulp.task('deploy', ['scripts', 'styles'], function () {
+	rsync({
+		ssh: true,
+		src: './**',
+		dest: server.user + '@' + server.host + ':' + server.path,
+		recursive: true,
+		syncDest: true,
+		exclude: ['.DS_Store'],
+		args: ['--verbose']
+	}, function(error, stdout, stderr, cmd) {
+		if (error) {
+			gutil.log(gutil.colors.red(stderr));
+		} else {
+			gutil.log(stdout);
+		}
+	});
 });
