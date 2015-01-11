@@ -29,7 +29,15 @@
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Primary Menu', 'agile' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+			<?php //wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+			<ul>
+			<?php
+				$categories = get_categories();
+				foreach( $categories as $cat ) {
+					?><li><?php _e( $cat->name ); ?></li><?php
+				}
+			?>
+			</ul>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
