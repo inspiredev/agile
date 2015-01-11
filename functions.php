@@ -142,4 +142,4 @@ require get_template_directory() . '/inc/jetpack.php';
 /**
  * Reference post type
  */
-require get_template_directory() . '/posts/reference.php';
+require get_template_directory() . '/structure/reference.php';
