@@ -7,6 +7,7 @@ function create_highlight() {
 				'name' => __( 'Highlights' ),
 				'singular_name' => __( 'Highlight' )
 			),
+			'menu_position' => 5,
 			'public' => true,
 			'has_archive' => true,
 			'taxonomies' => array('category')
