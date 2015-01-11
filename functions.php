@@ -143,3 +143,8 @@ require get_template_directory() . '/inc/jetpack.php';
  * Reference post type
  */
 require get_template_directory() . '/structure/reference.php';
+
+/**
+ * Release post type
+ */
+require get_template_directory() . '/structure/release.php';
