@@ -72,3 +72,7 @@ gulp.task('scripts', function () {
 	}
 	return rebundle();
 });
+
+gulp.task('watch', ['enable-watch-mode', 'js'], function () {
+	gulp.watch('paths.scss.src', ['scss']);
+});
