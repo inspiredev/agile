@@ -1,0 +1,29 @@
+{
+  "name": "agile",
+  "version": "1.0.0",
+  "description": "Agile WordPress theme",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/inspiredev/agile.git"
+  },
+  "author": "Tri Nguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/inspiredev/agile/issues"
+  },
+  "homepage": "https://github.com/inspiredev/agile",
+  "devDependencies": {
+    "browserify": "^8.1.0",
+    "gulp": "^3.8.10",
+    "gulp-autoprefixer": "^2.0.0",
+    "gulp-csso": "^0.2.9",
+    "gulp-plumber": "^0.6.6",
+    "gulp-sass": "^1.2.4",
+    "gulp-util": "^3.0.2",
+    "watchify": "^2.2.1"
+  }
+}
