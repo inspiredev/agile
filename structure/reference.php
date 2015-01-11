@@ -8,7 +8,8 @@ function create_reference() {
 				'singular_name' => __( 'Reference' )
 			),
 			'public' => true,
-			'has_archive' => true
+			'has_archive' => true,
+			'taxonomies' => array('category')
 		)
 	);
 }
