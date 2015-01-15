@@ -14,7 +14,8 @@ function create_release() {
 			'supports' => array(
 				'title',
 				'editor',
-				'page-attributes'
+				'page-attributes',
+				'thumbnail'
 			),
 			'taxonomies' => array( 'category' )
 		)
