@@ -80,7 +80,7 @@ gulp.task('watch', ['enable-watch-mode', 'scripts'], function () {
 });
 
 var server = require('./server.json');
-gulp.task('deploy', ['scripts', 'styles'], function () {
+gulp.task('rsync', function () {
 	rsync({
 		ssh: true,
 		src: './**',
@@ -97,3 +97,5 @@ gulp.task('deploy', ['scripts', 'styles'], function () {
 		}
 	});
 });
+
+gulp.task('deploy', ['scripts', 'styles', 'rsync']);
