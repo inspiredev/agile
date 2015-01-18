@@ -1,0 +1,26 @@
+.site-title {
+	margin: 0 auto;
+	width: 10rem;
+	@media (min-width: 48.75em) {
+		float: left;
+		clear: none;
+		width: auto;
+	}
+	img {
+		width: 10rem;
+		@media (min-width: 48.75em) {
+			width: 14.5rem;
+		}
+	}
+}
+
+.site-description {
+	display: none;
+	@media (min-width: 48.76em) {
+		clear: none;
+		display: block;
+		float: left;
+		margin-top: 2.4rem;
+		margin-left: 1em;
+	}
+}
