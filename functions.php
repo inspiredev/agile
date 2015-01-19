@@ -102,7 +102,9 @@ add_action( 'widgets_init', 'agile_widgets_init' );
 function agile_scripts() {
 	wp_enqueue_style( 'agile-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'agile-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	wp_enqueue_style( 'icono', get_template_directory_uri() . '/assets/icono.min.css' );
+
+	// wp_enqueue_script( 'agile-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'agile-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 

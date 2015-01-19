@@ -70,7 +70,7 @@ gulp.task('scripts', function () {
 				gutil.log(gutil.colors.red('Browserify ' + e));
 			})
 			.pipe(source('main.js'))
-			.pipe(gulp.dest('./js/dist/main.js'));
+			.pipe(gulp.dest('./js/dist'));
 	}
 	return rebundle();
 });

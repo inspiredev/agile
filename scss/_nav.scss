@@ -1,0 +1,26 @@
+.main-navigation {
+	width: 15.625rem;
+	left: -15.625rem;
+	position: absolute;
+	top: 0;
+}
+
+#page {
+	left: 0;
+	transition: left 0.2s ease-in;
+	position: relative;
+}
+
+#page.menu-active {
+	left: 15.625rem;
+}
+
+.menu-toggle {
+	border: 1px solid $black;
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	i {
+		color: $black;
+	}
+}
