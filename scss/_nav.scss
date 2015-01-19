@@ -33,12 +33,44 @@
 	.highlights,
 	.releases {
 		display: none;
+		h3,
+		li {
+			border-bottom: 1px solid $very-light-gray;
+			padding: 1rem;
+		}
+		h3 {
+			padding-left: 2rem;
+		}
+		li {
+			padding-left: 2.5rem;
+		}
+	}
+	.highlights {
+		li:last-child {
+			border-bottom: none;
+		}
 	}
 }
 
 .top-level {
 	> li {
 		border-bottom: 1px solid $nobel;
+	}
+	.active {
+		.releases,
+		.references,
+		.highlights {
+			display: block;
+			h3 {
+				font-weight: bold;
+			}
+		}
+		.category-name {
+			border-bottom: 1px solid $nobel;
+		}
+	}
+	.inactive {
+		display: none;
 	}
 }
 
@@ -60,8 +92,14 @@
 		content: '>';
 		display: block;
 		position: absolute;
-		right: 0.5rem;
+		right: 0.8rem;
 		top: 0.7rem;
+	}
+	li.active & {
+		font-weight: bold;
+		&:after {
+			display: none;
+		}
 	}
 	li:nth-of-type(1) & {
 		border-color: $claret;

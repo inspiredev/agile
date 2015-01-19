@@ -42,23 +42,23 @@
 			<?php
 				$categories = get_categories();
 				foreach( $categories as $cat ) { ?>
-					<li><a href="#" class="category-name <?php echo $cat->slug ?>"><?php _e( $cat->name ); ?></a>
-						<div class="highlights">
-							<h3>Highlights</h3>
-							<?php $highlights = new WP_Query( array(
+					<li><a href="#" class="category-name"><?php _e( $cat->name ); ?></a>
+						<div class="releases">
+							<h3>New Releases</h3>
+							<?php $releases = new WP_Query( array(
 								'category_name' => $cat->slug,
-								'post_type' => 'highlight'
+								'post_type' => 'release'
 							) );
-							if ( $highlights->have_posts() ) { ?>
+							if ( $releases->have_posts() ) { ?>
 								<ul>
-								<?php while ($highlights->have_posts() ) {
-									$highlights->the_post(); ?>
+								<?php while ( $releases->have_posts() ) {
+									$releases->the_post(); ?>
 									<li><?php _e( get_the_title() ); ?>
 									</li>
 								<?php } ?>
 								</ul>
 							<?php } ?>
-						</div><!-- .highlights -->
+						</div><!-- .releases -->
 						<?php wp_reset_postdata(); ?>
 						<div class="references">
 							<h3>Success Stories</h3>
@@ -68,7 +68,7 @@
 							) );
 							if ( $references->have_posts() ) { ?>
 								<ul>
-								<?php while ($references->have_posts() ) {
+								<?php while ( $references->have_posts() ) {
 									$references->the_post(); ?>
 									<li><?php _e( get_the_title() ); ?>
 									</li>
@@ -77,22 +77,22 @@
 							<?php } ?>
 						</div><!-- .references -->
 						<?php wp_reset_postdata(); ?>
-						<div class="releases">
-							<h3>New Releases</h3>
-							<?php $releases = new WP_Query( array(
+						<div class="highlights">
+							<h3>Highlights</h3>
+							<?php $highlights = new WP_Query( array(
 								'category_name' => $cat->slug,
-								'post_type' => 'release'
+								'post_type' => 'highlight'
 							) );
-							if ( $releases->have_posts() ) { ?>
+							if ( $highlights->have_posts() ) { ?>
 								<ul>
-								<?php while ($releases->have_posts() ) {
-									$releases->the_post(); ?>
+								<?php while ( $highlights->have_posts() ) {
+									$highlights->the_post(); ?>
 									<li><?php _e( get_the_title() ); ?>
 									</li>
 								<?php } ?>
 								</ul>
 							<?php } ?>
-						</div><!-- .releases -->
+						</div><!-- .highlights -->
 						<?php wp_reset_postdata(); ?>
 					</li><?php
 				}
