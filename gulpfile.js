@@ -61,6 +61,7 @@ gulp.task('scripts', function () {
 	bundler.on('update', function (ids) {
 		gutil.log('File(s) changed: ' + gutil.colors.cyan(ids));
 		gutil.log('Rebunlding...');
+		rebundle();
 	});
 
 	function rebundle() {
