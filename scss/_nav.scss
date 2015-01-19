@@ -10,13 +10,14 @@
 
 .menu-toggle {
 	border: 1px solid $black;
+	color: $black;
 	cursor: pointer;
+	font-size: 1.2em;
 	position: absolute;
 	top: 1rem;
 	left: 1.2rem;
-	i {
-		color: $black;
-	}
+	text-align: center;
+	width: 3rem;
 }
 
 .main-navigation {
@@ -31,10 +32,16 @@
 		text-transform: uppercase;
 	}
 	.back {
+		border: 1px solid $nobel;
 		cursor: pointer;
 		display: none;
-		font-weight: bold;
+		padding-top: 3px;
+		padding-bottom: 1px;
 		position: absolute;
+		top: 1rem;
+		width: 3rem;
+		height: 3rem;
+		text-align: center;
 	}
 	&.item-active {
 		.back {
@@ -83,7 +90,7 @@
 			}
 		}
 		.category-name {
-			border-bottom: 1px solid $nobel;
+			border-bottom: 1px solid $very-light-gray;
 		}
 	}
 	.inactive {
@@ -105,16 +112,14 @@
 	&:hover {
 		background-color: $white-smoke;
 	}
-	&:after {
-		content: '>';
-		display: block;
+	.next {
 		position: absolute;
-		right: 0.8rem;
-		top: 0.7rem;
+		right: 1rem;
+		top: 1.5rem;
 	}
 	li.active & {
 		font-weight: bold;
-		&:after {
+		.next {
 			display: none;
 		}
 	}

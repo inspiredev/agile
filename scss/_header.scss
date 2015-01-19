@@ -5,23 +5,22 @@
 .site-branding {
 	border-left: 1px solid $nobel;
 	border-bottom: 1px solid $nobel;
-	padding-top: 0.9rem;
-	padding-bottom: 0.9rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 	height: 5.5rem;
 }
 
 .site-title {
 	margin: 0 auto;
-	width: 12rem;
+	width: 11rem;
 	@media (min-width: 48.75em) {
 		float: left;
 		clear: none;
 		width: auto;
 	}
 	img {
-		width: 12rem;
 		@media (min-width: 48.75em) {
-			width: 14.5rem;
+			max-width: 14.5rem;
 		}
 	}
 }

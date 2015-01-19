@@ -32,18 +32,25 @@
 		</div><!-- .site-branding -->
 
 		<a class="menu-toggle" aria-controls="menu">
-			<i class="icono-bars"></i>
+			<i class="fa fa-bars"></i>
 			<span class="screen-reader-text"><?php _e( 'Primary Menu', 'agile' ); ?></span>
 		</a>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<h2 class="menu-title"><span class="back"><</span><?php _e('Menu'); ?></h2>
+			<h2 class="menu-title">
+				<div class="back"><i class="fa fa-chevron-left"></i></div>
+				<?php _e('Menu'); ?>
+			</h2>
 			<?php //wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			<ul class="top-level">
 			<?php
 				$categories = get_categories();
 				foreach( $categories as $cat ) { ?>
-					<li><a href="#" class="category-name"><?php _e( $cat->name ); ?></a>
+					<li>
+						<a href="#" class="category-name">
+							<?php _e( $cat->name ); ?>
+							<i class="fa fa-chevron-right next"></i>
+						</a>
 						<div class="releases">
 							<h3>New Releases</h3>
 							<?php $releases = new WP_Query( array(
