@@ -2,16 +2,24 @@
 	position: relative;
 }
 
+.site-branding {
+	border-left: 1px solid $nobel;
+	border-bottom: 1px solid $nobel;
+	padding-top: 0.9rem;
+	padding-bottom: 0.9rem;
+	height: 5.5rem;
+}
+
 .site-title {
 	margin: 0 auto;
-	width: 10rem;
+	width: 12rem;
 	@media (min-width: 48.75em) {
 		float: left;
 		clear: none;
 		width: auto;
 	}
 	img {
-		width: 10rem;
+		width: 12rem;
 		@media (min-width: 48.75em) {
 			width: 14.5rem;
 		}

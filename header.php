@@ -37,6 +37,7 @@
 		</a>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<h2 class="menu-title"><span class="back"><</span><?php _e('Menu'); ?></h2>
 			<?php //wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			<ul class="top-level">
 			<?php
