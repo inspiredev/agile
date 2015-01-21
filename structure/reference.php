@@ -17,7 +17,7 @@ function create_reference() {
 				'page-attributes',
 				'thumbnail'
 			),
-			'taxonomies' => array( 'category' )
+			'taxonomies' => array( 'category', 'post_tag' )
 		)
 	);
 }
