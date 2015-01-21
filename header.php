@@ -44,7 +44,10 @@
 			<?php //wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			<ul class="top-level">
 			<?php
-				$categories = get_categories();
+				$categories = get_categories( array(
+					'parent' => 0,
+					'exclude' => '1' // hide Uncateegorized
+				) );
 				foreach( $categories as $cat ) { ?>
 					<li>
 						<a href="#" class="category-name">
