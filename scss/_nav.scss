@@ -69,12 +69,18 @@
 		}
 		li {
 			padding-left: 2.5rem;
+			@media screen and (min-width: 48.76em) {
+				border-bottom: none;
+			}
 		}
 	}
 	.highlights {
 		li:last-child {
 			border-bottom: none;
 		}
+	}
+	.featured-highlight {
+		display: none;
 	}
 }
 
@@ -96,16 +102,40 @@
 		}
 	}
 	.active {
+		.submenu-wrapper {
+			@media screen and (min-width: 48.76em) {
+				background-color: #fff;
+				box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+				position: absolute;
+				width: 100%;
+				left: 0;
+			}
+		}
 		.releases,
 		.references,
 		.highlights {
 			display: block;
+			@media screen and (min-width: 48.76em) {
+				float: right;
+				margin-left: 1%;
+				width: 20%;
+			}
 			h3 {
 				font-weight: bold;
 			}
 		}
-		.category-name {
-			border-bottom: 1px solid $very-light-gray;
+		.releases {
+			@media screen and (min-width: 48.76em) {
+				margin-right: 1%;
+			}
+		}
+		.featured-highlight {
+			@media screen and (min-width: 48.76em) {
+				display: block;
+				float: left;
+				width: 33.333333%;
+				margin-left: 2.6666667%;
+			}
 		}
 	}
 	.inactive {
@@ -144,7 +174,6 @@
 	}
 	&:hover,
 	&.active {
-		background-color: $white-smoke;
 		color: #fff;
 	}
 	.next {
@@ -156,9 +185,11 @@
 		}
 	}
 	&.active {
+		border-bottom: 1px solid $very-light-gray;
 		font-weight: bold;
 		@media screen and (min-width: 48.76em) {
-			background-color: darken($white-smoke, 10%);
+			border-bottom: none;
+			font-weight: normal;
 		}
 		.next {
 			display: none;

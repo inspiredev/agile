@@ -9,9 +9,9 @@ jQuery(document).ready(function ($) {
 	$('.top-level .category-name').on('click', function () {
 		var $parentLi = $(this).closest('li');
 		$('.main-navigation').toggleClass('item-active');
-		$('.top-level > li').not($parentLi).removeClass('active').toggleClass('inactive')
+		$('.top-level > li').not($parentLi).removeClass('active').addClass('inactive')
 			.find('.category-name').removeClass('active');
-		$parentLi.toggleClass('active');
+		$parentLi.toggleClass('inactive active');
 		$(this).toggleClass('active');
 	});
 	$('.back').on('click', function () {

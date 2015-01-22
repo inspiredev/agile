@@ -54,57 +54,61 @@
 							<?php _e( $cat->name ); ?>
 							<i class="fa fa-chevron-right next"></i>
 						</a>
-						<div class="releases">
-							<h3>New Releases</h3>
-							<?php $releases = new WP_Query( array(
-								'category_name' => $cat->slug,
-								'post_type' => 'release'
-							) );
-							if ( $releases->have_posts() ) { ?>
-								<ul>
-								<?php while ( $releases->have_posts() ) {
-									$releases->the_post(); ?>
-									<li><?php _e( get_the_title() ); ?>
-									</li>
+						<div class="submenu-wrapper">
+							<div class="featured-highlight">
+							</div><!-- .featured-highlight -->
+							<div class="releases">
+								<h3>New Releases</h3>
+								<?php $releases = new WP_Query( array(
+									'category_name' => $cat->slug,
+									'post_type' => 'release'
+								) );
+								if ( $releases->have_posts() ) { ?>
+									<ul>
+									<?php while ( $releases->have_posts() ) {
+										$releases->the_post(); ?>
+										<li><?php _e( get_the_title() ); ?>
+										</li>
+									<?php } ?>
+									</ul>
 								<?php } ?>
-								</ul>
-							<?php } ?>
-						</div><!-- .releases -->
-						<?php wp_reset_postdata(); ?>
-						<div class="references">
-							<h3>Success Stories</h3>
-							<?php $references = new WP_Query( array(
-								'category_name' => $cat->slug,
-								'post_type' => 'reference'
-							) );
-							if ( $references->have_posts() ) { ?>
-								<ul>
-								<?php while ( $references->have_posts() ) {
-									$references->the_post(); ?>
-									<li><?php _e( get_the_title() ); ?>
-									</li>
+							</div><!-- .releases -->
+							<?php wp_reset_postdata(); ?>
+							<div class="references">
+								<h3>Success Stories</h3>
+								<?php $references = new WP_Query( array(
+									'category_name' => $cat->slug,
+									'post_type' => 'reference'
+								) );
+								if ( $references->have_posts() ) { ?>
+									<ul>
+									<?php while ( $references->have_posts() ) {
+										$references->the_post(); ?>
+										<li><?php _e( get_the_title() ); ?>
+										</li>
+									<?php } ?>
+									</ul>
 								<?php } ?>
-								</ul>
-							<?php } ?>
-						</div><!-- .references -->
-						<?php wp_reset_postdata(); ?>
-						<div class="highlights">
-							<h3>Highlights</h3>
-							<?php $highlights = new WP_Query( array(
-								'category_name' => $cat->slug,
-								'post_type' => 'highlight'
-							) );
-							if ( $highlights->have_posts() ) { ?>
-								<ul>
-								<?php while ( $highlights->have_posts() ) {
-									$highlights->the_post(); ?>
-									<li><?php _e( get_the_title() ); ?>
-									</li>
+							</div><!-- .references -->
+							<?php wp_reset_postdata(); ?>
+							<div class="highlights">
+								<h3>Highlights</h3>
+								<?php $highlights = new WP_Query( array(
+									'category_name' => $cat->slug,
+									'post_type' => 'highlight'
+								) );
+								if ( $highlights->have_posts() ) { ?>
+									<ul>
+									<?php while ( $highlights->have_posts() ) {
+										$highlights->the_post(); ?>
+										<li><?php _e( get_the_title() ); ?>
+										</li>
+									<?php } ?>
+									</ul>
 								<?php } ?>
-								</ul>
-							<?php } ?>
-						</div><!-- .highlights -->
-						<?php wp_reset_postdata(); ?>
+							</div><!-- .highlights -->
+							<?php wp_reset_postdata(); ?>
+						</div>
 					</li><?php
 				}
 			?>
