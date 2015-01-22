@@ -1,3 +1,18 @@
 body {
 	border-top: 8px solid $yellow-green;
+	font-family: Lato, sans-serif;
+}
+
+#page {
+	left: 0;
+	transition: left 0.2s ease-in;
+	position: relative;
+	&.menu-active {
+		left: 25rem;
+	}
+	@media screen and (min-width: 48.76em) {
+		left: auto;
+		width: 48.75em;
+		margin: 0 auto;
+	}
 }

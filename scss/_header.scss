@@ -5,9 +5,13 @@
 .site-branding {
 	border-left: 1px solid $nobel;
 	border-bottom: 1px solid $nobel;
-	padding-top: 1rem;
-	padding-bottom: 1rem;
+	padding: 1rem 0;
 	height: 5.5rem;
+	@media screen and (min-width: 48.76em) {
+		border: none;
+		height: 7.1rem;
+		padding: 1.5rem 0;
+	}
 }
 
 .site-title {
@@ -27,7 +31,8 @@
 
 .site-description {
 	display: none;
-	@media (min-width: 48.76em) {
+	font-size: .9em;
+	@media screen and (min-width: 48.76em) {
 		clear: none;
 		display: block;
 		float: left;
