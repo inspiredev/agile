@@ -91,6 +91,9 @@
 				margin-right: 0;
 			}
 		}
+		@media screen and (min-width: 60.01em) {
+			margin-right: 3px;
+		}
 	}
 	.active {
 		.releases,
@@ -107,6 +110,9 @@
 	}
 	.inactive {
 		display: none;
+		@media screen and (min-width: 48.76em) {
+			display: block;
+		}
 	}
 }
 
@@ -128,12 +134,19 @@
 		height: 5em;
 		vertical-align: middle;
 	}
+	@media screen and (min-width: 60.01em) {
+		font-size: 0.9em;
+		max-width: 8.6em;
+	}
 	&:hover,
 	&:visited {
 		color: $black;
 	}
 	&:hover {
 		background-color: $white-smoke;
+		@media screen and (min-width: 48.76em) {
+			background-color: darken($white-smoke, 10%);
+		}
 	}
 	.next {
 		position: absolute;
@@ -145,6 +158,9 @@
 	}
 	li.active & {
 		font-weight: bold;
+		@media screen and (min-width: 48.76em) {
+			background-color: darken($white-smoke, 10%);
+		}
 		.next {
 			display: none;
 		}

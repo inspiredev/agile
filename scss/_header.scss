@@ -12,19 +12,26 @@
 		height: 7.1rem;
 		padding: 1.5rem 0;
 	}
+	@media screen and (min-width: 60.01em) {
+		height: 10rem;
+		padding: 2.5rem 0;
+	}
 }
 
 .site-title {
 	margin: 0 auto;
 	width: 11rem;
-	@media (min-width: 48.75em) {
+	@media screen and (min-width: 48.76em) {
 		float: left;
 		clear: none;
 		width: auto;
 	}
 	img {
-		@media (min-width: 48.75em) {
+		@media screen and (min-width: 48.76em) {
 			max-width: 14.5rem;
+		}
+		@media screen and (min-width: 60.01em) {
+			max-width: 18rem;
 		}
 	}
 }
@@ -38,5 +45,9 @@
 		float: left;
 		margin-top: 2.4rem;
 		margin-left: 1em;
+	}
+	@media screen and (min-width: 60.01em) {
+		font-size: 1em;
+		margin-top: 3.2rem;
 	}
 }

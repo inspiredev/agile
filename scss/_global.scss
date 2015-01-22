@@ -14,5 +14,11 @@ body {
 		left: auto;
 		width: 48.75em;
 		margin: 0 auto;
+		&.menu-active {
+			left: auto;
+		}
+	}
+	@media screen and (min-width: 60.01em) {
+		width: 60em;
 	}
 }
