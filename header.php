@@ -67,8 +67,7 @@
 									<ul>
 									<?php while ( $releases->have_posts() ) {
 										$releases->the_post(); ?>
-										<li><?php _e( get_the_title() ); ?>
-										</li>
+										<li><a href="<?php echo get_permalink(); ?>"><?php _e( get_the_title() ); ?></a></li>
 									<?php } ?>
 									</ul>
 								<?php } ?>
@@ -84,8 +83,7 @@
 									<ul>
 									<?php while ( $references->have_posts() ) {
 										$references->the_post(); ?>
-										<li><?php _e( get_the_title() ); ?>
-										</li>
+										<li><a href="<?php echo get_permalink(); ?>"><?php _e( get_the_title() ); ?></a></li>
 									<?php } ?>
 									</ul>
 								<?php } ?>
@@ -101,8 +99,7 @@
 									<ul>
 									<?php while ( $highlights->have_posts() ) {
 										$highlights->the_post(); ?>
-										<li><?php _e( get_the_title() ); ?>
-										</li>
+										<li><a href="<?php echo get_permalink(); ?>"><?php _e( get_the_title() ); ?></a></li>
 									<?php } ?>
 									</ul>
 								<?php } ?>
