@@ -5,3 +5,33 @@
 		border: none;
 	}
 }
+
+.page-header {
+	@extend %clearfix;
+}
+.page-title {
+	float: left;
+	.category-title {
+		display: inline-block;
+		font-size: 1.5em;
+		text-transform: uppercase;
+	}
+	.release-title {
+		font-size: 1.2em;
+	}
+}
+
+.release-tabs {
+	@media screen and (min-width: 48.76em) {
+		float: right;
+	}
+	.tab {
+		display: inline-block;
+		padding: 0.5em;
+	}
+}
+
+.release-content {
+	clear: left;
+	margin-top: 3rem;
+}
