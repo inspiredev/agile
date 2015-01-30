@@ -15,7 +15,7 @@ get_header(); ?>
 					<span class="category-title"><?php
 					// fix for old PHP
 					$categories = get_the_category();
-					echo $categories[0]->name; ?> | </span>
+					echo $categories[0]->name; ?></span> |
 					<span class="release-title"><?php echo get_the_title(); ?></span>
 				</div>
 				<div class="release-tabs">

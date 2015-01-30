@@ -8,16 +8,22 @@
 
 .page-header {
 	@extend %clearfix;
+	padding-bottom: 0;
+	border-bottom-color: $nobel;
 }
 .page-title {
 	float: left;
+	font-size: 1.5em;
+	padding-top: 0.5rem;
 	.category-title {
 		display: inline-block;
-		font-size: 1.5em;
+		// font-size: 1.3em;
+		margin-right: 0.5rem;
 		text-transform: uppercase;
 	}
 	.release-title {
-		font-size: 1.2em;
+		margin-left: 0.5rem;
+		font-size: 0.8em;
 	}
 }
 
@@ -26,8 +32,19 @@
 		float: right;
 	}
 	.tab {
-		display: inline-block;
-		padding: 0.5em;
+		background-color: $white-smoke;
+		border-top: 1px solid $very-light-gray;
+		border-left: 1px solid $very-light-gray;
+		color: $charcoal;
+		display: block;
+		float: left;
+		padding: 1rem 1.2em;
+		&.active {
+			background-color: #fff;
+		}
+		&:last-of-type {
+			border-right: 1px solid $very-light-gray;
+		}
 	}
 }
 
