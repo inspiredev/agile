@@ -76,8 +76,8 @@ gulp.task('scripts', function () {
 	return rebundle();
 });
 
-gulp.task('watch', ['enable-watch-mode', 'scripts'], function () {
-	gulp.watch('./scss/**/*.scss', ['styles']);
+gulp.task('watch', ['enable-watch-mode', 'scripts', 'styles'], function () {
+	gulp.watch('scss/**/*.scss', ['styles']);
 });
 
 var server = require('./server.json');
