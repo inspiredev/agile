@@ -1,5 +1,7 @@
 'use strict';
 
+require('bootstrap-sass');
+
 jQuery(document).ready(function ($) {
 	// nav menu toggle
 	$('.menu-toggle').on('click', function () {

@@ -30,5 +30,8 @@
     "vinyl-source-stream": "^1.0.0",
     "watchify": "^2.2.1",
     "xtend": "^4.0.0"
+  },
+  "dependencies": {
+    "bootstrap-sass": "^3.3.3"
   }
 }
