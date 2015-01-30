@@ -28,16 +28,16 @@
 }
 
 .release-tabs {
+	margin-bottom: 0;
 	@media screen and (min-width: 48.76em) {
 		float: right;
 	}
-	.tab {
+	li {
 		background-color: $white-smoke;
 		border-top: 1px solid $very-light-gray;
 		border-left: 1px solid $very-light-gray;
-		color: $charcoal;
-		display: block;
 		float: left;
+		list-style: none;
 		padding: 1rem 1.2em;
 		&.active {
 			background-color: #fff;
@@ -45,6 +45,9 @@
 		&:last-of-type {
 			border-right: 1px solid $very-light-gray;
 		}
+	}
+	.tab {
+		color: $charcoal;
 	}
 }
 

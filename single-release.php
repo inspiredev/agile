@@ -18,11 +18,11 @@ get_header(); ?>
 					echo $categories[0]->name; ?></span> |
 					<span class="release-title"><?php echo get_the_title(); ?></span>
 				</div>
-				<div class="release-tabs">
-					<a class="tab active" href="#overview" data-toggle="tab">Overview</a>
-					<a class="tab" href="#solution-details" data-toggle="tab">Solution Detail</a>
-					<a class="tab" href="#references" data-toggle="tab">References</a>
-				</div>
+				<ul class="release-tabs">
+					<li class="active"><a class="tab" href="#overview" data-toggle="tab">Overview</a></li>
+					<li><a class="tab" href="#solution-details" data-toggle="tab">Solution Detail</a></li>
+					<li><a class="tab" href="#references" data-toggle="tab">References</a></li>
+				</ul>
 			</div>
 			<div class="release-content tab-content">
 				<div id="overview" class="tab-pane fade in active"><?php the_content(); ?></div>
