@@ -2,6 +2,7 @@ var gulp = require('gulp'),
 	gutil = require('gulp-util'),
 	browserify = require('browserify'),
 	csso = require('gulp-csso'),
+	ftp = require('gulp-ftp'),
 	jscs = require('gulp-jscs'),
 	jshint = require('gulp-jshint'),
 	plumber = require('gulp-plumber'),
@@ -99,4 +100,15 @@ gulp.task('rsync', function () {
 	});
 });
 
-gulp.task('deploy', ['scripts', 'styles', 'rsync']);
+gulp.task('ftp', function () {
+	return gulp.src(['./**', '!node_modules/**'])
+		.pipe(ftp({
+			host: server.host,
+			user: server.user,
+			pass: server.pass,
+			remotePath: server.path
+		}))
+		.pipe(gutil.noop());
+});
+
+gulp.task('deploy', ['scripts', 'styles', 'ftp']);
