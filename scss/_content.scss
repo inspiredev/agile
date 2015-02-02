@@ -1,6 +1,6 @@
 .site-content {
 	border-left: 1px solid $nobel;
-	padding-left: 1.2rem;
+	padding: 0 1.2rem;
 	@media screen and (min-width: 48.76em) {
 		border: none;
 	}
@@ -8,38 +8,66 @@
 
 .page-header {
 	@extend %clearfix;
+	border-bottom: none;
+	margin-top: 2rem;
 	padding-bottom: 0;
-	border-bottom-color: $nobel;
+	text-align: center;
+	@media screen and (min-width: 48.76em) {
+		border-bottom: 1px solid $nobel;
+	}
 }
 .page-title {
-	float: left;
-	font-size: 1.5em;
 	padding-top: 0.5rem;
+	font-size: 1.2em;
+	margin-bottom: 1em;
+	@media screen and (min-width: 48.76em) {
+		float: left;
+		font-size: 1.5em;
+		margin-bottom: 0;
+	}
 	.category-title,
 	.reference-title {
 		display: inline-block;
-		// font-size: 1.3em;
 		margin-right: 0.5rem;
 		text-transform: uppercase;
 	}
+	.category-title,
+	.separator {
+		display: none;
+		@media screen and (min-width: 48.76em) {
+			display: inline-block;
+		}
+	}
 	.release-title {
+		color: $claret;
 		margin-left: 0.5rem;
-		font-size: 0.8em;
+		font-size: 1.1em;
+		@media screen and (min-width: 48.76em) {
+			font-size: 0.8em;
+		}
 	}
 }
 
 .release-tabs {
-	margin-bottom: 0;
+	@extend %clearfix;
+	display: inline-block;
+	margin: 0;
 	@media screen and (min-width: 48.76em) {
+		display: block;
 		float: right;
 	}
 	li {
 		background-color: $white-smoke;
 		border-top: 1px solid $very-light-gray;
 		border-left: 1px solid $very-light-gray;
+		border-bottom: 1px solid $very-light-gray;
 		float: left;
 		list-style: none;
-		padding: 1rem 1.2em;
+		padding: 1rem;
+		@media screen and (min-width: 48.76em) {
+			border-bottom: none;
+			padding: 1rem 1.2em;
+		}
 		&.active {
 			background-color: #fff;
 		}
@@ -49,31 +77,44 @@
 	}
 	.tab {
 		color: $charcoal;
+		&:hover,
+		&:focus {
+			text-decoration: none;
+		}
 	}
 }
 
 .release-content {
 	clear: left;
-	margin-top: 3rem;
+	@media screen and (min-width: 48.76em) {
+		margin-top: 3rem;
+	}
 	.reference-image {
-		float: left;
-		margin-right: 2.0833333%;
-		width: 47.9166667%;
+		margin-bottom: 1em;
+		@media screen and (min-width: 48.76em) {
+			float: left;
+			margin-right: 2.0833333%;
+			width: 47.9166667%;
+		}
 		img {
 			width: 100%;
 			height: auto;
 		}
 	}
 	.reference-details {
-		float: left;
-		width: 50%;
+		@media screen and (min-width: 48.76em) {
+			float: left;
+			width: 50%;
+		}
 	}
 	.reference-title {
-		border-bottom: 1px solid $charcoal;
 		font-size: 1.25em;
 		margin-bottom: 1rem;
 		padding-bottom: 1rem;
 		text-transform: uppercase;
+		@media screen and (min-width: 48.76em) {
+			border-bottom: 1px solid $charcoal;
+		}
 	}
 }
 
