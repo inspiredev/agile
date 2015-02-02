@@ -55,3 +55,55 @@
 	clear: left;
 	margin-top: 3rem;
 }
+
+.reference {
+	@extend %clearfix;
+	border-bottom: 1px solid $very-light-gray;
+	padding-bottom: 2rem;
+	margin-bottom: 2rem;
+}
+.reference-image {
+	float: left;
+	margin-right: 2.0833333%;
+	width: 47.9166667%;
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+.reference-title {
+	border-bottom: 1px solid $charcoal;
+	font-size: 1.25em;
+	margin-bottom: 1rem;
+	padding-bottom: 1rem;
+	text-transform: uppercase;
+}
+.reference-info {
+	@extend %clearfix;
+	margin-bottom: 1em;
+	.year,
+	.country {
+		float: left;
+		margin-right: .5em;
+		label {
+			font-weight: bold;
+		}
+	}
+}
+.reference-details {
+	float: left;
+	width: 50%;
+}
+
+.reference-content {
+	.read-more {
+		background-color: $yellow-green;
+		color: $white;
+		display: inline-block;
+		padding: 0.5em 1em;
+		&:hover {
+			background-color: darken($yellow-green, 10%);
+			text-decoration: none;
+		}
+	}
+}

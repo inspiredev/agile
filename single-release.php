@@ -39,7 +39,18 @@ get_header(); ?>
 						$references->the_post();
 						?>
 						<div class="reference">
-							<h4 class="reference-title"><?php the_title(); ?></h4>
+							<div class="reference-image"><?php the_post_thumbnail( 'large' ); ?></div>
+							<div class="reference-details">
+								<h3 class="reference-title"><?php the_title(); ?></h3>
+								<div class="reference-info">
+									<div class="year"><label>Year:</label> <?php the_field( 'year' ); ?></div>
+									<div class="country"><label>Country:</label> <?php the_field( 'country' ); ?></div>
+								</div>
+								<div class="reference-content">
+									<?php the_excerpt( '<div class="more">Read More</div>' ); ?>
+									<a class="read-more" href="<?php the_permalink(); ?>">Read More</a>
+								</div>
+							</div>
 						</div>
 					<?php }
 					wp_reset_postdata();
