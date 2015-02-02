@@ -15,7 +15,8 @@
 	float: left;
 	font-size: 1.5em;
 	padding-top: 0.5rem;
-	.category-title {
+	.category-title,
+	.reference-title {
 		display: inline-block;
 		// font-size: 1.3em;
 		margin-right: 0.5rem;
@@ -54,6 +55,26 @@
 .release-content {
 	clear: left;
 	margin-top: 3rem;
+	.reference-image {
+		float: left;
+		margin-right: 2.0833333%;
+		width: 47.9166667%;
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	.reference-details {
+		float: left;
+		width: 50%;
+	}
+	.reference-title {
+		border-bottom: 1px solid $charcoal;
+		font-size: 1.25em;
+		margin-bottom: 1rem;
+		padding-bottom: 1rem;
+		text-transform: uppercase;
+	}
 }
 
 .reference {
@@ -62,22 +83,7 @@
 	padding-bottom: 2rem;
 	margin-bottom: 2rem;
 }
-.reference-image {
-	float: left;
-	margin-right: 2.0833333%;
-	width: 47.9166667%;
-	img {
-		width: 100%;
-		height: auto;
-	}
-}
-.reference-title {
-	border-bottom: 1px solid $charcoal;
-	font-size: 1.25em;
-	margin-bottom: 1rem;
-	padding-bottom: 1rem;
-	text-transform: uppercase;
-}
+
 .reference-info {
 	@extend %clearfix;
 	margin-bottom: 1em;
@@ -89,10 +95,6 @@
 			font-weight: bold;
 		}
 	}
-}
-.reference-details {
-	float: left;
-	width: 50%;
 }
 
 .reference-content {

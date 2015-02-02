@@ -56,8 +56,8 @@ get_header(); ?>
 					wp_reset_postdata();
 				}
 				?>
-				</div>
-			</div>
+				</div><!-- #references -->
+			</div><!-- .release-content -->
 		<?php endwhile; // end of the loop. ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
