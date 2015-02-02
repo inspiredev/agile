@@ -161,3 +161,11 @@ require get_template_directory() . '/structure/highlight.php';
  * Post 2 Post Connections
  */
 require get_template_directory() . '/structure/connections.php';
+
+/**
+ * Excerpt more
+ */
+function agile_excerpt_more( $more ) {
+	return '...';
+}
+add_filter('excerpt_more', 'agile_excerpt_more');
