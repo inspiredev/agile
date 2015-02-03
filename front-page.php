@@ -19,32 +19,46 @@ get_header(); ?>
 			if ($highlights->post_count % 4 != 0) {
 				$highlight_groups++;
 			}
-			$highlight_count = 0;
 		?>
 			<div class="homepage-highlights">
-				<h3>Highlights</h3>
+				<div class="highlights-feature tab-content">
+				<?php while ( $highlights->have_posts() ) {
+					$highlights->the_post();?>
+					<div class="highlight-feature tab-pane fade in<?php if ( $highlights->current_post == 0 ) {?> active<?php } ?>" id="highlight-<?php echo $post->ID; ?>">
+						<div class="feature-image"><?php the_post_thumbnail( 'lage' ); ?></div>
+						<div class="title"><?php the_title(); ?></div>
+						<div class="excerpt"><?php the_excerpt(); ?></div>
+						<a class="read-more">Read more</a>
+					</div>
+				<?php } ?>
+				</div><!-- .homepage-highlights-feature -->
 				<div id="homepage-highlights-list" class="highlights-list carousel slide" data-ride="carousel" data-interval="false">
+					<h3>Highlights</h3>
 					<ol class="carousel-indicators">
 					<?php for ($i = 0; $i < $highlight_groups; $i++) {?>
 						<li data-target="#homepage-highlights-list" data-slide-to="<?php echo $i; ?>"<?php if ( $i == 0 ) {?> class="active"<?php } ?>>
 					<?php } ?>
 					</ol>
 					<div class="carousel-inner">
-						<?php while ( $highlights->have_posts() ) {
-							$highlights->the_post();
-							if ( $highlight_count % 4 == 0 ) { ?>
-							<div class="highlights-list-group item<?php if ($highlight_count == 0 ) {?> active<?php } ?>">
-							<?php } ?>
-							<div class="highlight">
+					<?php while ( $highlights->have_posts() ) {
+						$highlights->the_post();
+						if ( $highlights->current_post % 4 == 0 ) { ?>
+						<div class="highlights-list-group item<?php if ($highlights->current_post == 0 ) {?> active<?php } ?>">
+						<?php } ?>
+						<div class="highlight<?php if ( $highlights->current_post == 0 ) {?> active<?php } ?>">
+							<a class="tab" href="#highlight-<?php echo $post->ID; ?>" data-toggle="tab">
 							<?php the_field( 'date' );
 							the_title();
 							the_excerpt();?>
-							</div><!-- highlight -->
-							<?php $highlight_count++; ?>
-							<?php if ( $highlight_count % 4 == 0 ) { ?>
-							</div><!-- .highlights-list-group -->
-							<?php } ?>
+							</a>
+						</div><!-- highlight -->
+						<?php if ( ($highlights->current_post + 1) % 4 == 0 ) { ?>
+						</div><!-- .highlights-list-group -->
 						<?php } ?>
+					<?php
+					}
+					wp_reset_postdata();
+					?>
 					</div><!-- .carousel-inner -->
 				</div><!-- .highlights-list -->
 			</div>

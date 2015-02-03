@@ -1,16 +1,30 @@
 .homepage-highlights {
+}
+
+.highlights-feature {
 	float: left;
-	position: relative;
+	margin-right: 8.3333333%;
+	width: 54.1666667%;
+}
+
+.highlight-feature {
+	.feature-image {
+		width: 100%;
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+.highlights-list {
+	float: left;
 	width: 35.4166667%;
 	h3 {
 		border-bottom: 1px solid $very-light-gray;
 		padding-bottom: 1rem;
 		text-transform: uppercase;
 	}
-}
-
-.highlights-list {
-	position: static;
 	.carousel-indicators {
 		left: auto;
 		margin: 0;
@@ -23,5 +37,8 @@
 				background-color: $yellow-green;
 			}
 		}
+	}
+	.highlight {
+		display: block;
 	}
 }
