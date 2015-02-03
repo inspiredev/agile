@@ -30,7 +30,7 @@ get_header(); ?>
 						<div class="feature-details">
 							<h2 class="title"><?php the_title(); ?></h2>
 							<div class="excerpt"><?php the_excerpt(); ?></div>
-							<a class="read-more">Read more</a>
+							<a class="read-more" href="<?php the_permalink(); ?>">Read more</a>
 						</div>
 					</div>
 				<?php } ?>
