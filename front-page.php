@@ -25,10 +25,13 @@ get_header(); ?>
 				<?php while ( $highlights->have_posts() ) {
 					$highlights->the_post();?>
 					<div class="highlight-feature tab-pane fade in<?php if ( $highlights->current_post == 0 ) {?> active<?php } ?>" id="highlight-<?php echo $post->ID; ?>">
-						<div class="feature-image"><?php the_post_thumbnail( 'lage' ); ?></div>
-						<div class="title"><?php the_title(); ?></div>
-						<div class="excerpt"><?php the_excerpt(); ?></div>
-						<a class="read-more">Read more</a>
+						<div class="feature-image"><?php the_post_thumbnail( 'lage' ); ?>
+						</div>
+						<div class="feature-details">
+							<h2 class="title"><?php the_title(); ?></h2>
+							<div class="excerpt"><?php the_excerpt(); ?></div>
+							<a class="read-more">Read more</a>
+						</div>
 					</div>
 				<?php } ?>
 				</div><!-- .homepage-highlights-feature -->
@@ -43,17 +46,25 @@ get_header(); ?>
 					<?php while ( $highlights->have_posts() ) {
 						$highlights->the_post();
 						if ( $highlights->current_post % 4 == 0 ) { ?>
-						<div class="highlights-list-group item<?php if ($highlights->current_post == 0 ) {?> active<?php } ?>">
+						<ul class="highlights-list-group item<?php if ($highlights->current_post == 0 ) {?> active<?php } ?>">
 						<?php } ?>
-						<div class="highlight<?php if ( $highlights->current_post == 0 ) {?> active<?php } ?>">
-							<a class="tab" href="#highlight-<?php echo $post->ID; ?>" data-toggle="tab">
-							<?php the_field( 'date' );
-							the_title();
-							the_excerpt();?>
-							</a>
-						</div><!-- highlight -->
+							<li class="highlight<?php if ( $highlights->current_post == 0 ) {?> active<?php } ?>">
+								<a class="tab" href="#highlight-<?php echo $post->ID; ?>" data-toggle="tab">
+								<div class="timestamp">
+									<?php
+									$dateField = get_field( 'date' );
+									$date = DateTime::createFromFormat( 'd/m/Y', get_field( 'date' ) ); ?>
+									<?php if ( $date ) { ?>
+									<span class="date"><?php echo $date->format( 'd' ); ?></span>
+									<span class="month"><?php echo $date->format( 'M' ); ?></span>
+									<?php } ?>
+								</div>
+								<?php the_title();
+								the_excerpt();?>
+								</a>
+							</li><!-- highlight -->
 						<?php if ( ($highlights->current_post + 1) % 4 == 0 ) { ?>
-						</div><!-- .highlights-list-group -->
+						</ul><!-- .highlights-list-group -->
 						<?php } ?>
 					<?php
 					}

@@ -1,10 +1,13 @@
 .homepage-highlights {
+	@extend %clearfix;
+	border-bottom: 1px solid $charcoal;
+	padding-top: 2rem;
 }
 
 .highlights-feature {
 	float: left;
-	margin-right: 8.3333333%;
-	width: 54.1666667%;
+	margin-right: 8.5106383%;
+	width: 55.3191489%;
 }
 
 .highlight-feature {
@@ -15,13 +18,27 @@
 			height: auto;
 		}
 	}
+	.feature-details {
+		background-color: $white-smoke;
+		padding: 0.5em;
+		width: 100%;
+		.title {
+			font-size: 1.2em;
+			margin-bottom: .8em;
+			text-transform: uppercase;
+		}
+		.excerpt {
+			margin-bottom: .8em;
+		}
+	}
 }
 
 .highlights-list {
 	float: left;
-	width: 35.4166667%;
+	width: 36.1702128%;
 	h3 {
-		border-bottom: 1px solid $very-light-gray;
+		border-bottom: 1px solid $charcoal;
+		font-size: 1.2em;
 		padding-bottom: 1rem;
 		text-transform: uppercase;
 	}
@@ -38,7 +55,43 @@
 			}
 		}
 	}
+	.highlights-list-group {
+		list-style: none;
+		margin: 0;
+	}
 	.highlight {
-		display: block;
+		@extend %clearfix;
+		border-bottom: 1px solid $very-light-gray;
+		padding: 1rem 0;
+		&:last-child {
+			border-bottom: none;
+		}
+		&.active {
+			a {
+				color: $yellow-green;
+			}
+		}
+		a {
+			color: $charcoal;
+			&:hover,
+			&:focus {
+				color: $yellow-green;
+				text-decoration: none;
+			}
+		}
+		.timestamp {
+			float: left;
+			font-size: 1.3em;
+			padding-left: 2rem;
+			padding-right: 3rem;
+			text-align: center;
+			.date,
+			.month {
+				display: block;
+			}
+			.month {
+				text-transform: uppercase;
+			}
+		}
 	}
 }
