@@ -58,6 +58,32 @@ body {
 		display: inline-block;
 		margin-left: 1em;
 	}
+	.footer-menu {
+		float: left;
+		ul {
+			@extend %clearfix;
+			list-style: none;
+			margin: 0;
+		}
+		a {
+			border-right: 1px solid $white;
+			color: $white;
+			padding: 0 0.5em;
+		}
+		li {
+			float: left;
+			&:first-child {
+				a {
+					padding-left: 0;
+				}
+			}
+			&:last-child {
+				a {
+					border-right: none;
+				}
+			}
+		}
+	}
 }
 
 a:focus {

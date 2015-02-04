@@ -19,6 +19,10 @@
 		</div>
 		<div class="site-footer-bar">
 			<div class="site-footer-bar-inner">
+				<?php wp_nav_menu( array(
+					'theme_location' => 'footer',
+					'container_class' => 'footer-menu'
+				) ); ?>
 				<div class="site-info">
 					<?php bloginfo( 'name' ); ?>
 					<span class="copyright">Copyright <?php echo date('Y'); ?></span>
