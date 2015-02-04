@@ -72,10 +72,11 @@ get_header(); ?>
 					?>
 					</div><!-- .carousel-inner -->
 				</div><!-- .highlights-list -->
-			</div>
-		<?php }
-		?>
-
+			</div><!-- .homepage-highlights -->
+		<?php } ?>
+		<div class="homepage-content">
+			<?php the_content(); ?>
+		</div><!-- .homepage-content -->
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
