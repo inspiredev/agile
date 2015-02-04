@@ -10,6 +10,13 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 		<?php while ( have_posts() ) : the_post(); ?>
+			<?php
+			$references = new WP_Query( array(
+				'connected_type' => 'reference_to_release',
+				'connected_items' => get_queried_object(),
+				'nopaging' => true,
+			) );
+			?>
 			<div class="page-header">
 				<div class="page-title">
 					<span class="category-title"><?php
@@ -22,20 +29,14 @@ get_header(); ?>
 				<ul class="release-tabs">
 					<li class="active"><a class="tab" href="#overview" data-toggle="tab">Overview</a></li>
 					<li><a class="tab" href="#solution-details" data-toggle="tab">Solution Detail</a></li>
-					<li><a class="tab" href="#references" data-toggle="tab">References</a></li>
+					<?php if ( $references->have_posts() ) { ?><li><a class="tab" href="#references" data-toggle="tab">References</a></li><?php } ?>
 				</ul>
 			</div>
 			<div class="release-content tab-content">
 				<div id="overview" class="tab-pane fade in active"><?php the_content(); ?></div>
 				<div id="solution-details" class="tab-pane fade"><?php the_field('solution_details'); ?></div>
 				<div id="references" class="tab-pane fade">
-				<?php
-				$references = new WP_Query( array(
-					'connected_type' => 'reference_to_release',
-					'connected_items' => get_queried_object(),
-					'nopaging' => true,
-				) );
-				if ( $references->have_posts() ) {
+				<?php if ( $references->have_posts() ) {
 					while ( $references->have_posts() ) {
 						$references->the_post();
 						?>
