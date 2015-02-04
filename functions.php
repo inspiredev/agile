@@ -158,6 +158,11 @@ require get_template_directory() . '/structure/release.php';
 require get_template_directory() . '/structure/highlight.php';
 
 /**
+ * Solution post type
+ */
+require get_template_directory() . '/structure/solution.php';
+
+/**
  * Post 2 Post Connections
  */
 require get_template_directory() . '/structure/connections.php';
