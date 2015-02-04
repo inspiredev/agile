@@ -11,11 +11,15 @@ jQuery(document).ready(function ($) {
 	$('.top-level .category-name').on('click', function (e) {
 		e.preventDefault();
 		var $parentLi = $(this).closest('li');
-		$('.main-navigation').toggleClass('item-active');
-		$('.top-level > li').not($parentLi).removeClass('active').addClass('inactive')
+		$('.top-level > li').addClass('inactive').not($parentLi).removeClass('active')
 			.find('.category-name').removeClass('active');
 		$parentLi.toggleClass('inactive active');
 		$(this).toggleClass('active');
+		if ($('.top-level > li').hasClass('active')) {
+			$('.main-navigation').addClass('item-active');
+		} else {
+			$('.main-navigation').removeClass('item-active');
+		}
 	});
 
 	$('.back').on('click', function () {

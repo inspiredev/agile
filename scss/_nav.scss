@@ -65,12 +65,19 @@
 			padding: 1rem;
 		}
 		h3 {
+			font-weight: bold;
 			padding-left: 2rem;
 		}
 		li {
 			padding-left: 2.5rem;
 			@media screen and (min-width: 48.76em) {
 				border-bottom: none;
+			}
+		}
+		a {
+			color: $charcoal;
+			&:hover {
+				color: $yellow-green;
 			}
 		}
 	}
@@ -119,9 +126,6 @@
 				float: right;
 				margin-left: 1%;
 				width: 20%;
-			}
-			h3 {
-				font-weight: bold;
 			}
 		}
 		.releases {
