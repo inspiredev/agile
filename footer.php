@@ -15,15 +15,7 @@
 			<div class="footer-logo">
 				<img src="<?php echo get_stylesheet_directory_uri() . '/assets/logo.png' ?>" alt="<?php bloginfo( 'name' ); ?>"/>
 			</div>
-			<div class="footer-menu">
-				<h4>About <?php bloginfo( 'name' ); ?></h4>
-			</div>
-			<div class="footer-popular">
-				<h4><?php _e( 'Most Popular'); ?></h4>
-			</div>
-			<div class="footer-contact">
-				<h4><?php _e( 'Contact' ); ?></h4>
-			</div>
+			<?php dynamic_sidebar( 'footer-content' ); ?>
 		</div>
 		<div class="site-footer-bar">
 			<div class="site-footer-bar-inner">

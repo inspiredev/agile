@@ -37,6 +37,15 @@ body {
 	border-top: 1px solid $very-light-gray;
 }
 
+.footer-content {
+	@extend %clearfix;
+}
+
+.footer-logo {
+	width: 25%;
+	float: left;
+}
+
 .site-footer-bar {
 	@extend %clearfix;
 	background-color: $yellow-green;
