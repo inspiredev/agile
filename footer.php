@@ -11,11 +11,28 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'agile' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'agile' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'agile' ), 'agile', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
-		</div><!-- .site-info -->
+		<div class="footer-content">
+			<div class="footer-logo">
+				<img src="<?php echo get_stylesheet_directory_uri() . '/assets/logo.png' ?>" alt="<?php bloginfo( 'name' ); ?>"/>
+			</div>
+			<div class="footer-menu">
+				<h4>About <?php bloginfo( 'name' ); ?></h4>
+			</div>
+			<div class="footer-popular">
+				<h4><?php _e( 'Most Popular'); ?></h4>
+			</div>
+			<div class="footer-contact">
+				<h4><?php _e( 'Contact' ); ?></h4>
+			</div>
+		</div>
+		<div class="site-footer-bar">
+			<div class="site-footer-bar-inner">
+				<div class="site-info">
+					<?php bloginfo( 'name' ); ?>
+					<span class="copyright">Copyright <?php echo date('Y'); ?></span>
+				</div><!-- .site-info -->
+			</div>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
