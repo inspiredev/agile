@@ -16,6 +16,11 @@ get_header(); ?>
 				'connected_items' => get_queried_object(),
 				'nopaging' => true,
 			) );
+			$solution_detail = new WP_Query( array(
+				'connected_type' => 'release_to_solution_detail',
+				'connected_items' => get_queried_object(),
+				'nopaging' => true,
+			) );
 			?>
 			<div class="page-header">
 				<div class="page-title">
@@ -27,14 +32,27 @@ get_header(); ?>
 					<span class="release-title"><?php echo get_the_title(); ?></span>
 				</div>
 				<ul class="release-tabs">
+				<?php if ( $solution_detail->have_posts() || $references->have_posts() ) { ?>
 					<li class="active"><a class="tab" href="#overview" data-toggle="tab">Overview</a></li>
+				<?php } ?>
+				<?php if ( $solution_detail->have_posts() ) { ?>
 					<li><a class="tab" href="#solution-details" data-toggle="tab">Solution Detail</a></li>
-					<?php if ( $references->have_posts() ) { ?><li><a class="tab" href="#references" data-toggle="tab">References</a></li><?php } ?>
+				<?php } ?>
+				<?php if ( $references->have_posts() ) { ?>
+					<li><a class="tab" href="#references" data-toggle="tab">References</a></li>
+				<?php } ?>
 				</ul>
 			</div>
 			<div class="release-content tab-content">
 				<div id="overview" class="tab-pane fade in active"><?php the_content(); ?></div>
-				<div id="solution-details" class="tab-pane fade"><?php the_field('solution_details'); ?></div>
+				<div id="solution-details" class="tab-pane fade">
+				<?php if ( $solution_detail->have_posts() ) {
+					while ( $solution_detail->have_posts() ) {
+						$solution_detail->the_post();
+						the_content();
+					}
+				} ?>
+				</div>
 				<div id="references" class="tab-pane fade">
 				<?php if ( $references->have_posts() ) {
 					while ( $references->have_posts() ) {
