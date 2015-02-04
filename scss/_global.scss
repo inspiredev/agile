@@ -13,14 +13,41 @@ body {
 	}
 	@media screen and (min-width: 48.76em) {
 		left: auto;
-		width: 48.75em;
-		margin: 0 auto;
 		&.menu-active {
 			left: auto;
 		}
 	}
+}
+
+.site-header,
+.site-content,
+.footer-content,
+.site-footer-bar-inner {
+	@media screen and (min-width: 48.76em) {
+		width: 48.75em;
+		margin: 0 auto;
+	}
 	@media screen and (min-width: 60.01em) {
 		width: 60em;
+	}
+}
+
+.site-footer {
+	background-color: $white-smoke;
+	border-top: 1px solid $very-light-gray;
+}
+
+.site-footer-bar {
+	@extend %clearfix;
+	background-color: $yellow-green;
+	color: $white;
+	padding: 0.5em 0;
+	.site-info {
+		float: right;
+	}
+	.copyright {
+		display: inline-block;
+		margin-left: 1em;
 	}
 }
 
