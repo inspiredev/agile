@@ -11,12 +11,12 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="footer-content">
-			<div class="footer-logo">
+		<ul class="footer-content">
+			<li class="widget footer-logo">
 				<img src="<?php echo get_stylesheet_directory_uri() . '/assets/logo.png' ?>" alt="<?php bloginfo( 'name' ); ?>"/>
-			</div>
+			</li>
 			<?php dynamic_sidebar( 'footer-content' ); ?>
-		</div>
+		</ul>
 		<div class="site-footer-bar">
 			<div class="site-footer-bar-inner">
 				<?php wp_nav_menu( array(

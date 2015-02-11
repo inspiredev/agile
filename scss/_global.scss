@@ -39,11 +39,38 @@ body {
 
 .footer-content {
 	@extend %clearfix;
+	margin-top: 1.5em;
+	list-style: none;
+	.widget {
+		float: left;
+		padding: 0 1em;
+		width: 25%;
+		ul {
+			list-style: none;
+			margin: 0;
+		}
+		a {
+			color: $charcoal;
+			font-size: 0.9em;
+			padding: 0.3em 0;
+			&:hover {
+				color: $yellow-green;
+			}
+		}
+	}
+	.widgettitle {
+		border-bottom: 1px solid $very-light-gray;
+		margin-bottom: 0.5em;
+		padding-bottom: 0.5em;
+	}
 }
 
 .footer-logo {
 	width: 25%;
 	float: left;
+	img {
+		max-width: 10em;
+	}
 }
 
 .site-footer-bar {
