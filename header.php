@@ -23,6 +23,7 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-date"><?php echo date('l, j F Y'); ?></div>
+		<?php do_action('icl_language_selector'); ?>
 		<div class="site-branding">
 			<h1 class="site-title">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
