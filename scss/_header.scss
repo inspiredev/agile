@@ -97,11 +97,13 @@
 .utility-menu {
 	@extend %clearfix;
 	background-color: $white-smoke;
+	border-bottom: 1px solid $nobel;
 	.main-navigation & {
 		padding: 0.5em 0;
 	}
 	@media screen and (min-width: 48.76em) {
 		background-color: transparent;
+		border-bottom: none;
 		padding: 0;
 		position: absolute;
 		top: -3em;

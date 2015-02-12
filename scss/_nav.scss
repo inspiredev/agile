@@ -94,15 +94,57 @@
 .top-level {
 	@extend %clearfix;
 	> li {
-		border-bottom: 1px solid $nobel;
-		&:first-child {
-			border-top: 1px solid $nobel;
+		border-left: 5px solid transparent;
+		position: relative;
+		&:after {
+			border-bottom: 1px solid $nobel;
+			bottom: 0;
+			content: "";
+			position: absolute;
+			width: 100%;
+		}
+		&:nth-of-type(1) {
+			border-color: $claret;
+		}
+		&:nth-of-type(2) {
+			border-color: $pompadour;
+		}
+		&:nth-of-type(3) {
+			border-color: $windsor;
+		}
+		&:nth-of-type(4) {
+			border-color: $fun-blue;
+		}
+		&:nth-of-type(5) {
+			border-color: $wasabi;
+		}
+		&:nth-of-type(6) {
+			border-color: $lochmara;
+		}
+		&:nth-of-type(7) {
+			border-color: $scooter;
+		}
+		&:nth-of-type(8) {
+			border-color: $dell;
+		}
+		&:nth-of-type(9) {
+			border-color: $hot-curry;
+		}
+		&:nth-of-type(10) {
+			border-color: $christine;
 		}
 		@media screen and (min-width: 48.76em) {
-			border-bottom: none;
+			border-top: 5px solid transparent;
+			border-left: none;
 			display: block;
 			float: left;
 			margin-right: 2.5px;
+			&:after {
+				display: none;
+			}
+			&:first-child {
+				border-top-width: 5px;
+			}
 			&:last-child {
 				margin-right: 0;
 			}
@@ -155,7 +197,7 @@
 }
 
 .category-name {
-	border-left: 5px solid transparent;
+	border-left: 1px solid $white-smoke;
 	color: $black;
 	display: block;
 	padding: 1rem;
@@ -164,7 +206,7 @@
 	@media screen and (min-width: 48.76em) {
 		background-color: $white-smoke;
 		border-left: none;
-		border-top: 5px solid transparent;
+		border-top: 1px solid $white-smoke;
 		display: table-cell;
 		font-size: .75em;
 		max-width: 7.5em;
@@ -207,70 +249,60 @@
 		}
 	}
 	li:nth-of-type(1) & {
-		border-color: $claret;
 		&:hover,
 		&.active {
 			background-color: $claret;
 		}
 	}
 	li:nth-of-type(2) & {
-		border-color: $pompadour;
 		&:hover,
 		&.active {
 			background-color: $pompadour;
 		}
 	}
 	li:nth-of-type(3) & {
-		border-color: $windsor;
 		&:hover,
 		&.active {
 			background-color: $windsor;
 		}
 	}
 	li:nth-of-type(4) & {
-		border-color: $fun-blue;
 		&:hover,
 		&.active {
 			background-color: $fun-blue;
 		}
 	}
 	li:nth-of-type(5) & {
-		border-color: $wasabi;
 		&:hover,
 		&.active {
 			background-color: $wasabi;
 		}
 	}
 	li:nth-of-type(6) & {
-		border-color: $lochmara;
 		&:hover,
 		&.active {
 			background-color: $lochmara;
 		}
 	}
 	li:nth-of-type(7) & {
-		border-color: $scooter;
 		&:hover,
 		&.active {
 			background-color: $scooter;
 		}
 	}
 	li:nth-of-type(8) & {
-		border-color: $dell;
 		&:hover,
 		&.active {
 			background-color: $dell;
 		}
 	}
 	li:nth-of-type(9) & {
-		border-color: $hot-curry;
 		&:hover,
 		&.active {
 			background-color: $hot-curry;
 		}
 	}
 	li:nth-of-type(10) & {
-		border-color: $christine;
 		&:hover,
 		&.active {
 			background-color: $christine;
