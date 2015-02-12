@@ -10,6 +10,7 @@ jQuery(document).ready(function ($) {
 
 	$('.top-level .category-name').on('click', function (e) {
 		e.preventDefault();
+		e.stopPropagation();
 		var $parentLi = $(this).closest('li');
 		$('.top-level > li').addClass('inactive').not($parentLi).removeClass('active')
 			.find('.category-name').removeClass('active');
@@ -20,6 +21,13 @@ jQuery(document).ready(function ($) {
 		} else {
 			$('.main-navigation').removeClass('item-active');
 		}
+	});
+	// close submenu on click outisde
+	$('.submenu-wrapper').on('click', function (e) {
+		e.stopPropagation();
+	});
+	$('body').on('click', function (e) {
+		$('.top-level >li, .category-name').removeClass('active inactive');
 	});
 
 	$('.back').on('click', function () {
