@@ -93,3 +93,19 @@
 		}
 	}
 }
+
+.utility-menu {
+	@media screen and (min-width: 48.76em) {
+		position: absolute;
+		top: -3em;
+		right: 0;
+	}
+	.home {
+		@media screen and (min-width: 48.76em) {
+			display: none;
+		}
+	}
+	.search {
+
+	}
+}

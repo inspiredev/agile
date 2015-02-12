@@ -43,6 +43,11 @@
 				<div class="back"><i class="fa fa-chevron-left"></i></div>
 				<?php _e('Menu'); ?>
 			</h2>
+			<ul class="utility-menu">
+				<li class="home"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"></a></li>
+				<li class="share"></li>
+				<li class="search"><?php get_search_form(); ?></li>
+			</ul>
 			<?php //wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			<ul class="top-level">
 			<?php
