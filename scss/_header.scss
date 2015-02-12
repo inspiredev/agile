@@ -95,17 +95,41 @@
 }
 
 .utility-menu {
+	@extend %clearfix;
+	background-color: $white-smoke;
+	.main-navigation & {
+		padding: 0.5em 0;
+	}
 	@media screen and (min-width: 48.76em) {
+		background-color: transparent;
+		padding: 0;
 		position: absolute;
 		top: -3em;
 		right: 0;
 	}
 	.home {
+		float: left;
+		margin-left: 1em;
+		a {
+			color: $charcoal;
+			&:hover {
+				color: $yellow-green;
+			}
+			i {
+				font-size: 1.5em;
+			}
+		}
 		@media screen and (min-width: 48.76em) {
 			display: none;
 		}
 	}
 	.search {
+		float: right;
+		margin-right: 0.3em;
+		@media screen and (min-width: 48.76em) {
+			float: none;
+			margin-right: 0;
+		}
 		.search-field {
 			border-radius: 0;
 			font-size: 0.8em;
@@ -114,11 +138,15 @@
 			border-radius: 0;
 			border: none;
 			box-shadow: none;
+			display: none;
 			line-height: 1.2;
 			text-shadow: none;
 			&:hover {
 				background-color: $yellow-green;
 				color: $white;
+			}
+			@media screen and (min-width: 48.76em) {
+				display: inline-block;
 			}
 		}
 	}

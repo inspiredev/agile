@@ -44,7 +44,7 @@
 				<?php _e('Menu'); ?>
 			</h2>
 			<ul class="utility-menu">
-				<li class="home"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"></a></li>
+				<li class="home"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><i class="fa fa-home"></i></a></li>
 				<li class="share"></li>
 				<li class="search"><?php get_search_form(); ?></li>
 			</ul>

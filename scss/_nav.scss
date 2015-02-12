@@ -95,6 +95,9 @@
 	@extend %clearfix;
 	> li {
 		border-bottom: 1px solid $nobel;
+		&:first-child {
+			border-top: 1px solid $nobel;
+		}
 		@media screen and (min-width: 48.76em) {
 			border-bottom: none;
 			display: block;
