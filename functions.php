@@ -106,6 +106,7 @@ add_action( 'widgets_init', 'agile_widgets_init' );
  * Enqueue scripts and styles.
  */
 function agile_scripts() {
+	wp_enqueue_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Lato' );
 	wp_enqueue_style( 'agile-style', get_stylesheet_uri() );
 
 	// wp_enqueue_style( 'icono', get_template_directory_uri() . '/assets/icono.min.css' );
