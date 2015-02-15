@@ -137,6 +137,7 @@ a:focus {
 	border-bottom: 1px solid $very-light-gray;
 	margin-bottom: 1em;
 	padding-bottom: 0.5em;
+	text-transform: uppercase;
 }
 
 .agile-button {
@@ -152,6 +153,7 @@ a:focus {
 	&:hover,
 	&:focus {
 		background-color: darken($yellow-green, 10%);
+		color: $white;
 		box-shadow: none;
 		text-decoration: none;
 	}
