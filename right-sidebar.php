@@ -1,11 +1,11 @@
 <?php
 /*
-Template Name: Left Sidebar
+Template Name: Right Sidebar
 */
 
 get_header(); ?>
 
-	<div id="primary" class="content-area sidebar left-sidebar">
+	<div id="primary" class="content-area sidebar right-sidebar">
 	<?php if ( have_posts() ) : ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 			<header class="page-header">

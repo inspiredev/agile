@@ -154,10 +154,9 @@
 	}
 }
 
-.left-sidebar {
+.sidebar {
 	#main {
 		@media screen and (min-width: 48.76em) {
-			float: right;
 			width: 75%;
 		}
 	}
@@ -181,3 +180,18 @@
 	}
 }
 
+.left-sidebar {
+	#main {
+		@media screen and (min-width: 48.76em) {
+			float: right;
+		}
+	}
+}
+
+.right-sidebar {
+	#main {
+		@media screen and (min-width: 48.76em) {
+			float: left;
+		}
+	}
+}
