@@ -116,3 +116,9 @@ body {
 a:focus {
 	outline: none;
 }
+
+.widget-title {
+	border-bottom: 1px solid $very-light-gray;
+	margin-bottom: 1em;
+	padding-bottom: 0.5em;
+}
