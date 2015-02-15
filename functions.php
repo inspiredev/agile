@@ -181,3 +181,17 @@ function agile_excerpt_more( $more ) {
 	return '...';
 }
 add_filter('excerpt_more', 'agile_excerpt_more');
+
+// Shortcodes
+
+// [button]
+// $atts properties
+// - border_radius: eg. "2px"
+function agile_button( $atts, $content='' ) {
+	$button = shortcode_atts( array(
+		'border_radius' => 0
+	), $atts );
+
+	return '<button class="agile-button" style="border-radius: ' . $button['border_radius'] . '">' . $content . '</button>';
+}
+add_shortcode( 'button', 'agile_button' );
