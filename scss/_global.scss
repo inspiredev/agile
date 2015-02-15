@@ -159,3 +159,10 @@ a:focus {
 		color: $white;
 	}
 }
+
+blockquote {
+	background-color: $white-smoke;
+	border-left: 3px solid $very-light-gray;
+	font-style: italic;
+	padding: .5em;
+}
