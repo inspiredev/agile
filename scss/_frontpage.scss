@@ -1,6 +1,6 @@
 .homepage-highlights {
 	@extend %clearfix;
-	border-bottom: 1px solid $charcoal;
+	border-bottom: 1px solid $black;
 	margin-bottom: 2em;
 	padding: 2rem 0 1em;
 }
@@ -62,7 +62,7 @@
 	}
 	.highlight {
 		@extend %clearfix;
-		border-bottom: 1px solid $very-light-gray;
+		border-bottom: 1px solid $charcoal;
 		padding: 1rem 0;
 		&:last-child {
 			border-bottom: none;

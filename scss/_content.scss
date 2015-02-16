@@ -115,14 +115,14 @@
 		padding-bottom: 1rem;
 		text-transform: uppercase;
 		@media screen and (min-width: 48.76em) {
-			border-bottom: 1px solid $charcoal;
+			border-bottom: 1px solid $black;
 		}
 	}
 }
 
 .reference {
 	@extend %clearfix;
-	border-bottom: 1px solid $very-light-gray;
+	border-bottom: 1px solid $charcoal;
 	padding-bottom: 2rem;
 	margin-bottom: 2rem;
 }

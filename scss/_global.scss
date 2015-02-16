@@ -4,6 +4,26 @@ body {
 	font-family: Lato, sans-serif;
 }
 
+blockquote {
+	background-color: $white-smoke;
+	border-left: 3px solid $very-light-gray;
+	font-style: italic;
+	padding: .5em;
+}
+
+ p {
+ 	font-size: 0.9em;
+ 	font-weight: 300;
+ }
+
+ a:focus {
+	outline: none;
+}
+
+ul {
+	margin-left: 1em;
+}
+
 #page {
 	left: 0;
 	transition: left 0.2s ease-in;
@@ -56,7 +76,7 @@ body {
 		}
 		a {
 			color: $charcoal;
-			font-size: 0.9em;
+			font-size: 0.8em;
 			padding: 0.3em 0;
 			&:hover {
 				color: $yellow-green;
@@ -64,7 +84,7 @@ body {
 		}
 	}
 	.widgettitle {
-		border-bottom: 1px solid $very-light-gray;
+		border-bottom: 1px solid $charcoal;
 		margin-bottom: 0.5em;
 		padding-bottom: 0.5em;
 	}
@@ -129,12 +149,8 @@ body {
 	}
 }
 
-a:focus {
-	outline: none;
-}
-
 .widget-title {
-	border-bottom: 1px solid $very-light-gray;
+	border-bottom: 1px solid $charcoal;
 	margin-bottom: 1em;
 	padding-bottom: 0.5em;
 	text-transform: uppercase;
@@ -162,9 +178,3 @@ a:focus {
 	}
 }
 
-blockquote {
-	background-color: $white-smoke;
-	border-left: 3px solid $very-light-gray;
-	font-style: italic;
-	padding: .5em;
-}
