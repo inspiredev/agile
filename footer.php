@@ -21,7 +21,7 @@
 			<div class="site-footer-bar-inner">
 				<?php wp_nav_menu( array(
 					'theme_location' => 'footer',
-					'menu_class' => 'footer-menu'
+					'container_class' => 'footer-menu'
 				) ); ?>
 				<div class="site-info">
 					<?php bloginfo( 'name' ); ?>™
