@@ -81,6 +81,8 @@ gulp.task('watch', ['enable-watch-mode', 'scripts', 'styles'], function () {
 	gulp.watch('scss/**/*.scss', ['styles']);
 });
 
+gulp.task('default', ['watch']);
+
 var server = require('./server.json');
 gulp.task('rsync', function () {
 	rsync({
