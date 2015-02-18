@@ -198,7 +198,7 @@
 }
 
 .category-name {
-	border-left: 1px solid $white-smoke;
+	border-left: 1px solid $white;
 	color: $black;
 	display: block;
 	padding: 1rem;
@@ -207,7 +207,7 @@
 	@media screen and (min-width: 48.76em) {
 		background-color: $white-smoke;
 		border-left: none;
-		border-top: 1px solid $white-smoke;
+		border-top: 1px solid $white;
 		display: table-cell;
 		font-size: .75em;
 		max-width: 7.5em;
