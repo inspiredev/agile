@@ -65,7 +65,7 @@
 							<div class="featured-highlight">
 							</div><!-- .featured-highlight -->
 							<div class="releases">
-								<h3>New Releases</h3>
+								<h3><?php _e( 'New Releases', 'agile' ); ?></h3>
 								<?php $releases = new WP_Query( array(
 									'category_name' => $cat->slug,
 									'post_type' => 'release'
@@ -74,14 +74,14 @@
 									<ul>
 									<?php while ( $releases->have_posts() ) {
 										$releases->the_post(); ?>
-										<li><h4 class="title"><a href="<?php echo get_permalink(); ?>"><?php _e( get_the_title() ); ?></a></h4></li>
+										<li><h4 class="title"><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h4></li>
 									<?php } ?>
 									</ul>
 								<?php } ?>
 							</div><!-- .releases -->
 							<?php wp_reset_postdata(); ?>
 							<div class="references">
-								<h3>Success Stories</h3>
+								<h3><?php _e( 'Success Stories', 'agile' ); ?></h3>
 								<?php $references = new WP_Query( array(
 									'category_name' => $cat->slug,
 									'post_type' => 'reference'
@@ -91,7 +91,7 @@
 									<?php while ( $references->have_posts() ) {
 										$references->the_post(); ?>
 										<li>
-											<h4 class="title"><a href="<?php echo get_permalink(); ?>"><?php _e( get_the_title() ); ?></a></h4>
+											<h4 class="title"><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h4>
 											<?php the_excerpt(); ?>
 										</li>
 									<?php } ?>
@@ -100,7 +100,7 @@
 							</div><!-- .references -->
 							<?php wp_reset_postdata(); ?>
 							<div class="highlights">
-								<h3>Highlights</h3>
+								<h3><?php _e( 'Highlights', 'agile' ); ?></h3>
 								<?php $highlights = new WP_Query( array(
 									'category_name' => $cat->slug,
 									'post_type' => 'highlight'
@@ -110,7 +110,7 @@
 									<?php while ( $highlights->have_posts() ) {
 										$highlights->the_post(); ?>
 										<li>
-											<h4 class="title"><a href="<?php echo get_permalink(); ?>"><?php _e( get_the_title() ); ?></a></h4>
+											<h4 class="title"><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h4>
 											<?php the_excerpt(); ?>
 										</li>
 									<?php } ?>

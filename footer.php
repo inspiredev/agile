@@ -25,7 +25,7 @@
 				) ); ?>
 				<div class="site-info">
 					<?php bloginfo( 'name' ); ?>™
-					<span class="copyright">Copyright <?php echo date('Y'); ?></span>
+					<span class="copyright"><?php _e( 'Copyright', 'agile' ); ?> <?php echo date('Y'); ?></span>
 				</div><!-- .site-info -->
 			</div>
 		</div>

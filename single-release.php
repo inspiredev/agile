@@ -33,13 +33,13 @@ get_header(); ?>
 				</div>
 				<ul class="release-tabs">
 				<?php if ( $solution_detail->have_posts() || $references->have_posts() ) { ?>
-					<li class="active"><a class="tab" href="#overview" data-toggle="tab">Overview</a></li>
+					<li class="active"><a class="tab" href="#overview" data-toggle="tab"><?php _e( 'Overview', 'agile' ); ?></a></li>
 				<?php } ?>
 				<?php if ( $solution_detail->have_posts() ) { ?>
-					<li><a class="tab" href="#solution-details" data-toggle="tab">Solution Detail</a></li>
+					<li><a class="tab" href="#solution-details" data-toggle="tab"><?php _e( 'Solution Detail', 'agile' ); ?></a></li>
 				<?php } ?>
 				<?php if ( $references->have_posts() ) { ?>
-					<li><a class="tab" href="#references" data-toggle="tab">References</a></li>
+					<li><a class="tab" href="#references" data-toggle="tab"><?php _e( 'References', 'agile' ); ?></a></li>
 				<?php } ?>
 				</ul>
 			</div>
@@ -63,12 +63,12 @@ get_header(); ?>
 							<div class="reference-details">
 								<h3 class="reference-title"><?php the_title(); ?></h3>
 								<div class="reference-info">
-									<div class="year"><label>Year:</label> <?php the_field( 'year' ); ?></div>
-									<div class="country"><label>Country:</label> <?php the_field( 'country' ); ?></div>
+									<div class="year"><label><?php _e( 'Year', 'agile' ); ?>:</label> <?php the_field( 'year' ); ?></div>
+									<div class="country"><label><?php _e( 'Country', 'agile' ); ?>:</label> <?php the_field( 'country' ); ?></div>
 								</div>
 								<div class="reference-content">
 									<?php the_excerpt( '<div class="more">Read More</div>' ); ?>
-									<a class="read-more" href="<?php the_permalink(); ?>">Read More</a>
+									<a class="read-more" href="<?php the_permalink(); ?>"><?php _e( 'Read More', 'agile' ); ?></a>
 								</div>
 							</div>
 						</div>
