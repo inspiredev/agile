@@ -12,14 +12,17 @@ jQuery(document).ready(function ($) {
 		e.preventDefault();
 		e.stopPropagation();
 		var $parentLi = $(this).closest('li');
-		$('.top-level > li').addClass('inactive').not($parentLi).removeClass('active')
-			.find('.category-name').removeClass('active');
-		$parentLi.toggleClass('inactive active');
+
+		$parentLi.toggleClass('active').removeClass('inactive');
 		$(this).toggleClass('active');
-		if ($('.top-level > li').hasClass('active')) {
+		if ($parentLi.hasClass('active')) {
 			$('.main-navigation').addClass('item-active');
+			$('.top-level > li').not($parentLi).addClass('inactive').removeClass('active')
+			.find('.category-name').removeClass('active');
 		} else {
 			$('.main-navigation').removeClass('item-active');
+			$('.top-level > li').not($parentLi).removeClass('active inactive')
+			.find('.category-name').removeClass('active');
 		}
 	});
 	// close submenu on click outisde
@@ -32,7 +35,7 @@ jQuery(document).ready(function ($) {
 
 	$('.back').on('click', function () {
 		$('.main-navigation').removeClass('item-active');
-		$('.top-level > li').removeClass('active').removeClass('inactive');
+		$('.top-level > li').removeClass('active inactive');
 		$('.category-name').removeClass('active');
 	});
 
