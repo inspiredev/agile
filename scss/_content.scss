@@ -1,16 +1,12 @@
 .site-content {
-	border-left: 1px solid $nobel;
-	padding: 0 1.2rem;
-	margin-bottom: 1em;
+	padding: 0 1.2rem 1em;
 	@media screen and (min-width: 48.76em) {
-		border: none;
-		padding: 0;
+		padding: 0 0 1em;
 	}
 }
 
 .page-header {
 	@extend %clearfix;
-	border-bottom: none;
 	margin-top: 2rem;
 	padding-bottom: 0;
 	text-align: center;

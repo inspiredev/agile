@@ -59,19 +59,30 @@
 	.highlights,
 	.releases {
 		display: none;
-		h3,
+		h3 {
+			border-bottom: 1px solid $nobel;
+			font-weight: bold;
+			padding: 1rem 1rem 1rem 2rem;
+			text-transform: uppercase;
+			@media screen and (min-width: 48.76em) {
+				padding-left: 0;
+			}
+		}
 		li {
 			border-bottom: 1px solid $very-light-gray;
-			padding: 1rem;
-		}
-		h3 {
-			font-weight: bold;
-			padding-left: 2rem;
-		}
-		li {
-			padding-left: 2.5rem;
+			font-size: .9em;
+			padding: 1rem 1rem 1rem 2.5rem;
+			&:last-child {
+				border-bottom: 1px solid $charcoal;
+			}
 			@media screen and (min-width: 48.76em) {
-				border-bottom: none;
+				padding-left: 0;
+				&:last-child {
+					border-bottom: none;
+				}
+			}
+			p:last-child {
+				margin-bottom: 0;
 			}
 		}
 		a {
@@ -80,10 +91,21 @@
 				color: $yellow-green;
 			}
 		}
+		.title {
+			line-height: 1.4;
+			text-transform: uppercase;
+		}
 	}
 	.highlights {
 		li:last-child {
 			border-bottom: none;
+		}
+	}
+	.releases {
+		li {
+			@media screen and (min-width: 48.76em) {
+				border-bottom: none;
+			}
 		}
 	}
 	.featured-highlight {
@@ -156,6 +178,7 @@
 	}
 	.active {
 		.submenu-wrapper {
+			padding-bottom: 1em;
 			@media screen and (min-width: 48.76em) {
 				background-color: #fff;
 				box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
