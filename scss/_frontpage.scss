@@ -6,9 +6,11 @@
 }
 
 .highlights-feature {
-	float: left;
-	margin-right: 8.5106383%;
-	width: 55.3191489%;
+	@media screen and (min-width: 48.76em) {
+		float: left;
+		margin-right: 8.5106383%;
+		width: 55.3191489%;
+	}
 }
 
 .highlight-feature {
@@ -35,8 +37,12 @@
 }
 
 .highlights-list {
-	float: left;
-	width: 36.1702128%;
+	margin-top: 1em;
+	@media screen and (min-width: 48.76em) {
+		float: left;
+		margin-top: 0;
+		width: 36.1702128%;
+	}
 	h3 {
 		border-bottom: 1px solid $charcoal;
 		font-size: 1.2em;
