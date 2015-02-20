@@ -210,15 +210,18 @@
 		border-top: 1px solid $white;
 		display: table-cell;
 		font-size: .75em;
-		max-width: 7.5em;
+		max-width: 9rem;
 		padding: 0 1rem;
 		text-align: center;
 		height: 4em;
 		vertical-align: middle;
 	}
 	@media screen and (min-width: 60.01em) {
-		font-size: 0.9em;
-		max-width: 8em;
+		font-size: .9em;
+		[lang="pt-br"] & {
+			font-size: .8em;
+		}
+		max-width: 11.6rem;
 	}
 	&:hover,
 	&:visited,
