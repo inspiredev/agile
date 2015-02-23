@@ -30,7 +30,7 @@
 
 .site-title {
 	margin: 0 auto;
-	width: 11rem;
+	width: 9rem;
 	@media screen and (min-width: 48.76em) {
 		float: left;
 		clear: none;
@@ -67,25 +67,43 @@
 	position: absolute;
 	right: 0.5em;
 	top: 1rem;
-	width: 6.5em;
+	width: 6em;
 	z-index: 1;
 	@media screen and (min-width: 48.76em) {
 		top: 0.3em;
 		right: 0;
-		width: 9em;
+		width: 10em;
 	}
 	a {
 		border: 1px solid $very-light-gray;
+		padding-left: 0.3em;
+		@media screen and (min-width: 48.76em) {
+			padding-left: 0.5em;
+		}
 	}
 	.iclflag {
-		margin-right: 0.3em;
 		margin-bottom: 0.3em;
+		@media screen and (min-width: 48.76em) {
+			margin-right: 0.3em;
+		}
+	}
+	.icl_lang_sel_current {
+		margin-left: -3px;
+		@media screen and (min-width: 48.76em) {
+			margin-left: 0;
+		}
 	}
 	li {
 		width: 100%;
 	}
 	ul ul {
 		width: 100%;
+		a {
+			padding-left: 0.3em;
+			@media screen and (min-width: 48.76em) {
+				padding-left: 0.5em;
+			}
+		}
 	}
 	.icl_lang_sel_translated {
 		display: none;
