@@ -21,10 +21,10 @@ get_header(); ?>
 			}
 		?>
 			<div class="homepage-highlights">
-				<div class="highlights-feature tab-content">
+				<div class="highlights-feature">
 				<?php while ( $highlights->have_posts() ) {
 					$highlights->the_post();?>
-					<div class="highlight-feature tab-pane fade in<?php if ( $highlights->current_post == 0 ) {?> active<?php } ?>" id="highlight-<?php echo $post->ID; ?>">
+					<div class="highlight-feature">
 						<div class="feature-image"><?php the_post_thumbnail( 'large' ); ?>
 						</div>
 						<div class="feature-details">
@@ -48,8 +48,8 @@ get_header(); ?>
 						if ( $highlights->current_post % 4 == 0 ) { ?>
 						<ul class="highlights-list-group item<?php if ($highlights->current_post == 0 ) {?> active<?php } ?>">
 						<?php } ?>
-							<li class="highlight<?php if ( $highlights->current_post == 0 ) {?> active<?php } ?>">
-								<a class="tab" href="#highlight-<?php echo $post->ID; ?>" data-toggle="tab">
+							<li class="highlight">
+								<a href="<?php the_permalink(); ?>">
 								<div class="timestamp">
 									<?php
 									$dateField = get_field( 'date' );
