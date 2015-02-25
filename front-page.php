@@ -25,7 +25,7 @@ get_header(); ?>
 				<?php while ( $highlights->have_posts() ) {
 					$highlights->the_post();?>
 					<div class="highlight-feature tab-pane fade in<?php if ( $highlights->current_post == 0 ) {?> active<?php } ?>" id="highlight-<?php echo $post->ID; ?>">
-						<div class="feature-image"><?php the_post_thumbnail( 'lage' ); ?>
+						<div class="feature-image"><?php the_post_thumbnail( 'large' ); ?>
 						</div>
 						<div class="feature-details">
 							<h2 class="title"><?php the_title(); ?></h2>

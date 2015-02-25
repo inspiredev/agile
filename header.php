@@ -62,8 +62,25 @@
 							<i class="fa fa-chevron-right next"></i>
 						</a>
 						<div class="submenu-wrapper">
-							<div class="featured-highlight">
-							</div><!-- .featured-highlight -->
+							<div class="featured-release">
+							<?php $featured_release = new WP_Query( array(
+								'category_name' => $cat->slug,
+								'post_type' => 'release',
+								'orderby' => 'rand',
+								'posts_per_page' => 1,
+								'meta_key' => 'feature',
+								'meta_value' => '1'
+							) );
+							if ( $featured_release->have_posts() ) {
+								while ( $featured_release->have_posts() ) {
+									$featured_release->the_post(); ?>
+								<?php the_post_thumbnail( 'medium' ); ?>
+								<h4 class="title"><?php the_title(); ?></h4>
+								<?php the_excerpt(); ?>
+								<?php } ?>
+							<?php }
+							?>
+							</div><!-- .featured-release -->
 							<div class="releases">
 								<h3><?php _e( 'New Releases', 'agile' ); ?></h3>
 								<?php $releases = new WP_Query( array(
