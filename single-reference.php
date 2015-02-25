@@ -17,8 +17,8 @@ get_header(); ?>
 		</div>
 		<div class="reference-content">
 			<div class="reference-info">
-				<div class="year"><label>Year:</label> <?php the_field( 'year' ); ?></div>
-				<div class="country"><label>Country:</label> <?php the_field( 'country' );?></div>
+				<div class="year"><label><?php _e( 'Year', 'agile' ); ?>:</label> <?php the_field( 'year' ); ?></div>
+				<div class="country"><label><?php _e( 'Country', 'agile' ); ?>:</label> <?php the_field( 'country' );?></div>
 			</div>
 			<div class="reference-image">
 				<?php the_post_thumbnail( 'large' ); ?>
