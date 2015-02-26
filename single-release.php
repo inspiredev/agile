@@ -44,7 +44,10 @@ get_header(); ?>
 				</ul>
 			</div>
 			<div class="release-content tab-content">
-				<div id="overview" class="tab-pane fade in active"><?php the_content(); ?></div>
+				<div id="overview" class="tab-pane fade in active">
+					<h4 class="subtitle"><?php the_field( 'subtitle' ); ?></h4>
+					<?php the_content(); ?>
+				</div>
 				<div id="solution-details" class="tab-pane fade">
 				<?php if ( $solution_detail->have_posts() ) {
 					while ( $solution_detail->have_posts() ) {

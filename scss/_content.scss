@@ -89,7 +89,12 @@
 .release-content {
 	clear: left;
 	@media screen and (min-width: 48.76em) {
-		margin-top: 3rem;
+		margin-top: 2rem;
+	}
+	.subtitle {
+		font-size: 1.2em;
+		margin-bottom: 1em;
+		text-transform: uppercase;
 	}
 	.reference-image {
 		margin-bottom: 1em;
