@@ -74,8 +74,7 @@ get_header(); ?>
 								<span class="month"><?php echo $date->format( 'M' ); ?></span>
 								<?php } ?>
 							</div>
-							<?php the_title();
-							the_excerpt();?>
+							<?php the_title(); ?>
 							</a>
 						</li><!-- highlight -->
 					<?php if ( ($highlights->current_post + 1) % 4 == 0 ) { ?>
