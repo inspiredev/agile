@@ -175,12 +175,16 @@ require get_template_directory() . '/structure/solution.php';
 require get_template_directory() . '/structure/connections.php';
 
 /**
- * Excerpt more
+ * Excerpt
  */
 function agile_excerpt_more( $more ) {
 	return '...';
 }
 add_filter('excerpt_more', 'agile_excerpt_more');
+function agile_excerpt_length( $length ) {
+	return 20;
+}
+add_filter( 'excerpt_length', 'agile_excerpt_length', 999 );
 
 // Shortcodes
 
