@@ -186,6 +186,17 @@ function agile_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'agile_excerpt_length', 999 );
 
+/**
+ * Date format for localization
+ */
+function agile_translate_date_format($format) {
+	if (function_exists('icl_translate')) {
+		$format = icl_translate('Formats', $format, $format);
+	}
+	return $format;
+}
+add_filter('option_date_format', 'agile_translate_date_format');
+
 // Shortcodes
 
 // [button]
