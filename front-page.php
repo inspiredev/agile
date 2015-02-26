@@ -11,7 +11,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 		<div class="homepage-top">
-			<div id="homepage-featured-releases" class="featured-releases carousel slide" data-ride="carousel" data-interval="3000">
+			<div id="homepage-featured-releases" class="featured-releases carousel slide" data-ride="carousel" data-interval="7000">
 			<?php
 			$featured_releases = new WP_Query( array(
 				'post_type' => 'release',
