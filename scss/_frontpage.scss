@@ -1,11 +1,11 @@
-.homepage-highlights {
+.homepage-top {
 	@extend %clearfix;
 	border-bottom: 1px solid $black;
 	margin-bottom: 2em;
 	padding: 2rem 0 1em;
 }
 
-.highlights-feature {
+.featured-releases {
 	@media screen and (min-width: 48.76em) {
 		float: left;
 		margin-right: 8.5106383%;
@@ -13,7 +13,8 @@
 	}
 }
 
-.highlight-feature {
+.featured-release {
+	position: relative;
 	.feature-image {
 		width: 100%;
 		img {
@@ -22,8 +23,10 @@
 		}
 	}
 	.feature-details {
-		background-color: $white-smoke;
+		background-color: rgba($white-smoke, 0.5);
 		padding: 0.5em;
+		position: absolute;
+		bottom: 0;
 		width: 100%;
 		.title {
 			font-size: 1.2em;
