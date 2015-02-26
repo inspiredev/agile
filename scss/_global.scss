@@ -165,6 +165,13 @@ ul {
 	text-transform: uppercase;
 }
 
+.textwidget {
+	h3 {
+		border-bottom: 1px solid $charcoal;
+		padding-bottom: 0.3em;
+	}
+}
+
 .agile-button {
 	background-color: $yellow-green;
 	border: none;
