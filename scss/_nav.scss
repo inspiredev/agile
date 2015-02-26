@@ -65,7 +65,7 @@
 			padding: 1rem 1rem 1rem 2rem;
 			text-transform: uppercase;
 			@media screen and (min-width: 48.76em) {
-				padding-left: 0;
+				padding: 1rem 1rem 0.7rem 0;
 			}
 		}
 		li {
@@ -76,7 +76,7 @@
 				border-bottom: 1px solid $charcoal;
 			}
 			@media screen and (min-width: 48.76em) {
-				padding-left: 0;
+				padding: 0.5rem 0.5rem 0.5rem 0;
 				&:last-child {
 					border-bottom: none;
 				}
