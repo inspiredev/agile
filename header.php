@@ -85,7 +85,8 @@
 								<h3><?php _e( 'New Releases', 'agile' ); ?></h3>
 								<?php $releases = new WP_Query( array(
 									'category_name' => $cat->slug,
-									'post_type' => 'release'
+									'post_type' => 'release',
+									'orderby' => 'rand'
 								) );
 								if ( $releases->have_posts() ) { ?>
 									<ul>
@@ -101,7 +102,8 @@
 								<h3><?php _e( 'Success Stories', 'agile' ); ?></h3>
 								<?php $references = new WP_Query( array(
 									'category_name' => $cat->slug,
-									'post_type' => 'reference'
+									'post_type' => 'reference',
+									'orderby' => 'rand'
 								) );
 								if ( $references->have_posts() ) { ?>
 									<ul>
