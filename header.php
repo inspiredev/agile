@@ -103,7 +103,8 @@
 								<?php $references = new WP_Query( array(
 									'category_name' => $cat->slug,
 									'post_type' => 'reference',
-									'orderby' => 'rand'
+									'orderby' => 'rand',
+									'posts_per_page' => 4
 								) );
 								if ( $references->have_posts() ) { ?>
 									<ul>
