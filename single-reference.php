@@ -15,7 +15,10 @@ get_header(); ?>
 				<li data-breadcrumb="home"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php _e( 'Home', 'agile' ); ?></a>
 					<i class="fa fa-chevron-right"></i>
 				</li>
-				<?php $category = get_the_category()[0]; ?>
+				<?php
+					$categories = get_the_category();
+					$category = $categories[0];
+				?>
 				<li><a href="<?php get_category_link( $category->term_id ); ?>"><?php echo $category->cat_name; ?></a>
 					<i class="fa fa-chevron-right"></i>
 				</li>
