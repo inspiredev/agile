@@ -25,7 +25,7 @@ get_header(); ?>
 				<?php while ( $featured_releases->have_posts() ) {
 				$featured_releases->the_post();?>
 				<div class="featured-release item<?php if ( $featured_releases->current_post == 0 ) {?> active<?php } ?>">
-					<div class="feature-image"><?php the_post_thumbnail( 'homepage-slider' ); ?>
+					<div class="feature-image"><?php the_post_thumbnail( 'large' ); ?>
 					</div>
 					<div class="feature-details">
 						<h2 class="title"><?php the_title(); ?></h2>
