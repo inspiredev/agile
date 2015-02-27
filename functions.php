@@ -110,6 +110,8 @@ add_action( 'widgets_init', 'agile_widgets_init' );
 function agile_scripts() {
 	wp_enqueue_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Lato' );
 	wp_enqueue_style( 'agile-style', get_stylesheet_uri() );
+	// for custom style override
+	wp_enqueue_style( 'agile-custom', get_template_directory_uri() . '/custom.css' );
 
 	// wp_enqueue_style( 'icono', get_template_directory_uri() . '/assets/icono.min.css' );
 	wp_enqueue_style('fontawesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
