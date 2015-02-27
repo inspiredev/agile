@@ -44,9 +44,10 @@ get_header(); ?>
 			$highlights = new WP_Query( array(
 				'post_type' => 'highlight'
 			) );
+			$numHighlights = 4;
 			if ( $highlights->have_posts() ) {
-				$highlight_groups = floor($highlights->post_count / 4);
-				if ( $highlights->post_count % 4 != 0 ) {
+				$highlight_groups = floor($highlights->post_count / $numHighlights);
+				if ( $highlights->post_count % $numHighlights != 0 ) {
 					$highlight_groups++;
 				}
 			?>
@@ -60,7 +61,7 @@ get_header(); ?>
 				<div class="carousel-inner">
 				<?php while ( $highlights->have_posts() ) {
 					$highlights->the_post();
-					if ( $highlights->current_post % 4 == 0 ) { ?>
+					if ( $highlights->current_post % $numHighlights == 0 ) { ?>
 					<ul class="highlights-list-group item<?php if ( $highlights->current_post == 0 ) {?> active<?php } ?>">
 					<?php } ?>
 						<li class="highlight">
@@ -77,7 +78,7 @@ get_header(); ?>
 							<?php the_title(); ?>
 							</a>
 						</li><!-- highlight -->
-					<?php if ( ($highlights->current_post + 1) % 4 == 0 ) { ?>
+					<?php if ( ($highlights->current_post + 1) % $numHighlights == 0 ) { ?>
 					</ul><!-- .highlights-list-group -->
 					<?php } ?>
 				<?php
