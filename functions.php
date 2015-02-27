@@ -75,6 +75,8 @@ function agile_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
+	add_image_size( 'homepage-slider', 520, 400 );
 }
 endif; // agile_setup
 add_action( 'after_setup_theme', 'agile_setup' );
