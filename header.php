@@ -123,7 +123,11 @@
 								<h3><?php _e( 'Highlights', 'agile' ); ?></h3>
 								<?php $highlights = new WP_Query( array(
 									'category_name' => $cat->slug,
-									'post_type' => 'highlight'
+									'post_type' => 'release',
+									'orderby' => 'rand',
+									'posts_per_page' => 4,
+									'meta_key' => 'feature',
+									'meta_value' => '1'
 								) );
 								if ( $highlights->have_posts() ) { ?>
 									<ul>
