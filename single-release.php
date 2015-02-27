@@ -22,6 +22,18 @@ get_header(); ?>
 				'nopaging' => true,
 			) );
 			?>
+			<div class="breadcrumb">
+				<ul>
+					<li data-breadcrumb="home"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php _e( 'Home', 'agile' ); ?></a>
+						<i class="fa fa-chevron-right"></i>
+					</li>
+					<?php $category = get_the_category()[0]; ?>
+					<li><a href="<?php get_category_link( $category->term_id ); ?>"><?php echo $category->cat_name; ?></a>
+						<i class="fa fa-chevron-right"></i>
+					</li>
+					<li><?php the_title(); ?></li>
+				</ul>
+			</div><!-- .breadcrumb -->
 			<div class="page-header">
 				<div class="page-title">
 					<span class="category-title"><?php
