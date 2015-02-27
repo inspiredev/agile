@@ -55,13 +55,33 @@
 	.carousel-indicators {
 		left: auto;
 		margin: 0;
-		top: 0;
+		top: -.4em;
 		right: 0;
 		width: auto;
+		@media screen and (min-width: 48.76em) {
+			top: 0;
+		}
 		li {
+			border-radius: 50%;
 			background-color: $very-light-gray;
+			margin: .2em;
+			width: 1.3em;
+			height: 1.3em;
+			@media screen and (min-width: 48.76em) {
+				margin: .1em;
+				width: .8em;
+				height: .8em;
+			}
 			&.active {
 				background-color: $yellow-green;
+				margin: .1em;
+				width: 1.5em;
+				height: 1.5em;
+				@media screen and (min-width: 48.76em) {
+					margin: 0;
+					width: .9em;
+					height: .9em;
+				}
 			}
 		}
 	}
