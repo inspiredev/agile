@@ -169,6 +169,7 @@
 .sidebar {
 	#main {
 		@media screen and (min-width: 48.76em) {
+			margin-top: 1em;
 			width: 75%;
 		}
 	}
@@ -178,6 +179,7 @@
 		@media screen and (min-width: 48.76em) {
 			border-top: none;
 			float: left;
+			margin-top: 1em;
 			margin-right: 2%;
 			padding: 0;
 			width: 23%;
@@ -188,6 +190,41 @@
 			font-size: 1.5em;
 			padding-bottom: 0.3em;
 			text-transform: uppercase;
+		}
+	}
+	.widget {
+		.widget-title {
+			margin-bottom: .5em;
+		}
+		ul {
+			list-style: none;
+			margin: 0;
+		}
+		li {
+			border-bottom: 1px solid $charcoal;
+			cursor: pointer;
+			padding: .7em .5em;
+			&:last-child {
+				border: none;
+			}
+			&.active {
+				background-color: $white-smoke;
+			}
+			a {
+				color: $charcoal;
+			}
+			&:hover {
+				background-color: $charcoal;
+				a {
+					color: $white;
+					text-decoration: none;
+				}
+			}
+		}
+		.tagcloud {
+			a {
+				color: $wasabi;
+			}
 		}
 	}
 }
