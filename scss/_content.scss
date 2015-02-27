@@ -136,7 +136,8 @@
 	@extend %clearfix;
 	margin-bottom: 1em;
 	.year,
-	.country {
+	.country,
+	.url {
 		float: left;
 		margin-right: .5em;
 		label {

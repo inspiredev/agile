@@ -19,6 +19,7 @@ get_header(); ?>
 			<div class="reference-info">
 				<div class="year"><label><?php _e( 'Year', 'agile' ); ?>:</label> <?php the_field( 'year' ); ?></div>
 				<div class="country"><label><?php _e( 'Country', 'agile' ); ?>:</label> <?php the_field( 'country' );?></div>
+				<div class="url"><label><?php _e( 'URL', 'agile' ); ?>:</label> <a href="<?php the_field( 'client_url' ); ?>"><?php the_field( 'client_url' ); ?></a></div>
 			</div>
 			<div class="reference-image">
 				<?php the_post_thumbnail( 'large' ); ?>
