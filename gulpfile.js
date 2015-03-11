@@ -90,7 +90,7 @@ gulp.task('rsync', function () {
 		dest: server.user + '@' + server.host + ':' + server.path,
 		recursive: true,
 		syncDest: true,
-		exclude: ['.DS_Store'],
+		exclude: ['.DS_Store', 'node_modules/**', 'server.json'],
 		args: ['--verbose']
 	}, function(error, stdout, stderr, cmd) {
 		if (error) {
@@ -102,7 +102,7 @@ gulp.task('rsync', function () {
 });
 var ftp = require('vinyl-ftp');
 gulp.task('ftp', function () {
-	var conn = vinylFtp.create({
+	var conn = ftp.create({
 		host: server.host,
 		user: server.user,
 		password: server.pass,
@@ -110,7 +110,7 @@ gulp.task('ftp', function () {
 		log: gutil.log
 	});
 
-	return gulp.src(['./**', '!node_modules/**'], {base: '.', buffer: false})
+	return gulp.src(['**', '!node_modules/**'], {base: '.', buffer: false})
 		.pipe(conn.newerOrDifferentSize(server.path))
 		.pipe(conn.dest(server.path));
 });
