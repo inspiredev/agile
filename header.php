@@ -22,7 +22,7 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'agile' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="site-date"><?php echo date_i18n( __( 'l, j F Y' ) ); ?></div>
+		<div class="site-date"><?php echo date_i18n( __( 'l, F j Y', 'agile' ) ); ?></div>
 		<?php do_action('icl_language_selector'); ?>
 		<div class="site-branding">
 			<h1 class="site-title">
