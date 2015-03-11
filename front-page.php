@@ -52,7 +52,7 @@ get_header(); ?>
 				}
 			?>
 			<div id="homepage-highlights-list" class="highlights-list carousel slide" data-ride="carousel" data-interval="false">
-				<h3>Highlights</h3>
+			<h3><?php _e( 'Highlights', 'agile' ); ?></h3>
 				<ol class="carousel-indicators">
 				<?php for ($i = 0; $i < $highlight_groups; $i++) {?>
 					<li data-target="#homepage-highlights-list" data-slide-to="<?php echo $i; ?>"<?php if ( $i == 0 ) {?> class="active"<?php } ?>>
